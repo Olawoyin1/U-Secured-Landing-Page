@@ -1,0 +1,30 @@
+.nav{
+    height: 80px;
+    display: grid;
+    place-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.links{
+    list-style: none;
+    text-decoration: none;
+
+}
