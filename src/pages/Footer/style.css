@@ -81,6 +81,11 @@
     height: 100px;
     width: 260px;
     justify-content: center;
+    z-index: 1000;
+}
+
+.social-links{
+    cursor: pointer;
 }
 
 .icons::after{
@@ -97,4 +102,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }

@@ -38,19 +38,24 @@ const Footer = () => {
                     </div>
                 </div>
 
+
+                        
+
+                
+
                 <div className="socials">
                     <img src="images/follow.png" alt="" />
                     <div className="icons">
-                        <a href="">
+                        <a className='social-links' target={"blank"} href="https://mobile.twitter.com/U_secured">
                             <img src="images/twitter.png" alt="" />
                         </a>
-                        <a href="">
+                        <a className='social-links' target={"blank"} href="">
                             <img src="images/facebook.png" alt="" />
                         </a>
-                        <a href="">
+                        <a className='social-links' target={"blank"} href="https://www.linkedin.com/in/u-secured-750b1a237">
                             <img src="images/linkedin.png" alt="" />
                         </a>
-                        <a href="">
+                        <a className='social-links'  target={"blank"}href="https://www.instagram.com/Usecured_">
                             <img src="images/instagram.png" alt="" />
                         </a>
                     </div>
