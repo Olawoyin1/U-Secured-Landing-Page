@@ -3,7 +3,7 @@
 }
 
 .hero{
-    height: 532px;
+    height: min-532px;
     position: relative;
     padding-top: 130px;
     z-index: 1;
@@ -118,3 +118,39 @@
 .color{
     color: #00BFFF;
 }
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1150px) {
+    .bold-text{
+        font-size: 50px;
+    }    
+
+    .hero-image{
+        display: none;
+    }
+}
+
+
+
+@media (max-width:800px) {
+    .flex-2{
+        flex-direction: column;
+    }
+
+    .content{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+

@@ -166,4 +166,8 @@
         flex-direction: column;
         justify-content: center;
     }
+
+    .col{
+        align-items: center;
+    }
 }
