@@ -14,7 +14,6 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* <Navbar /> */}
         <Routes>
           <Route path='/' element={<SharedLayout />}>
               <Route index element={<Hero />}/>

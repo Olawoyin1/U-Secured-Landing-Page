@@ -29,7 +29,7 @@
 
 
 .hero-content p{
-    width: 600px;
+    max-width: 600px;
     /* font-family: 'Cera Pro'; */
     color: #050505;
     margin-bottom: 44px;
@@ -64,14 +64,14 @@
     /* background: #FDFDFD; */
 }
 
-.underline{
+/* .underline{
     position: absolute;
     width: 70px;
     height: 12px;
     left: 1090px;
     z-index: 1;
     top: 140px;
-}
+} */
 
 
 

@@ -40,7 +40,7 @@
 
 .footer-text{
     margin: 48px 0 92px 0;
-    width: 460px;
+    max-width: 460px;
     font-size: 16px !important;
 }
 

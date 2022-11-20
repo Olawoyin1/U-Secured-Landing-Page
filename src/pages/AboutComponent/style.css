@@ -113,7 +113,6 @@
 @media (max-width:850px) {
     .top,
     .bottom{
-        border: 5px solid green;
         width: 100%;
     }
 
