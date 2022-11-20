@@ -146,8 +146,20 @@
 
 
 @media (max-width:900px){
+   .footer{
+    padding: 40px 0;
+   }
+
     .footer-flex{
         flex-direction: column;
+    }
+
+    .footer-text{
+        margin: 28px 0 62px 0;
+    }
+
+    .right{
+        margin-top: 20px;
     }
 
     .col-3{
@@ -157,12 +169,6 @@
 }
 
 
-
-@media (max-width:600px) {
-    .col-3{
-        gap: 40px;
-    }
-}
 
 @media (max-width:500px) {
     .icons{
