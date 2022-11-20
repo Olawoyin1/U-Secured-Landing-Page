@@ -18,7 +18,7 @@ const slideRight = {
       duration: 5,
       type : "spring",
       stiffness : 50, 
-      bounce : 20,
+      bounce : 250,
       when : "beforeChildren",
       staggerChildren : 2,
       ease : "easeInOut",
@@ -40,7 +40,7 @@ const slideDown = {
       delay : 3,
       type : "spring",
       stiffness : 50, 
-      bounce : 20,
+      bounce : 300,
       // yoyo : Infinity
     }
   }
@@ -59,7 +59,7 @@ const slideUp = {
       delay : 2.7,
       type : "spring",
       stiffness : 50, 
-      bounce : 20,
+      bounce : 200,
       ease : "easeInOut",
       // yoyo : Infinity
     }
