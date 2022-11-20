@@ -1,11 +1,20 @@
 import React, { useState } from 'react'
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 import "./style.css"
 import Data from "./Data"
 import EachFounderComponent from './EachFounderComponent'
 // Import Swiper styles
-import "swiper/css";
+// import "swiper/css";
 // import "./styles.css";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// import required modules
+import {Autoplay, Pagination, Navigation } from "swiper";
 
 
 const Founders = () => {
@@ -43,9 +52,39 @@ const Founders = () => {
             <Swiper 
               watchSlidesProgress={true} 
               slidesPerView={3} 
-              className="mySwiper">
+              // className="mySwiper">
               spaceBetween={90}
 
+
+              breakpoints={{
+                // when window width is >= 640px
+                640: {
+                  width: 640,
+                  slidesPerView: 1,
+                },
+                // when window width is >= 768px
+                768: {
+                  width: 768,
+                  slidesPerView: 2,
+                },
+              }}
+
+
+              // spaceBetween={30}
+              // slidesPerGroup={3}
+              // loop={true}
+              freeMode={true}
+              // loopFillGroupWithBlank={true}
+              
+              // navigation={true}
+              // modules={[Pagination, Navigation]}
+              // className="mySwiper"
+
+              // centeredSlides={true}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="mySwiper"
+              >
               {
                  Data.map((user, index) => {
                   return(
