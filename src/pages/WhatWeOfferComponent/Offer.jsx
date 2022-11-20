@@ -12,13 +12,13 @@ const Offer = () => {
             </div>
 
             <div className="offers-container">
-                <div className="left gap">
+                <div className="gap">
                     <h1 className='big-heading'>CALL FOR AMBULANCE</h1>
                     <p>The Call For Ambulance feature allows users access to several ambulance services with users’ location.</p>
                     <button className='btn'>Learn More</button>
                 </div>
 
-                <div className="right">
+                <div className='offer-image'>
                     <img src="images/ambulance.svg" alt="Ambulance-image" />
                 </div>
             </div>
@@ -26,10 +26,10 @@ const Offer = () => {
             <img className='arrow1' src="images/arrow1.png" alt="" />
 
             <div className="offers-container">
-                <div className="left">
+                <div className='offer-image'>
                     <img src="images/live.svg" alt="" />
                 </div>
-                <div className="right gap">
+                <div className="gap">
                 <h1 className='big-heading'>GO LIVE</h1>
                     <p>The Go-Live Is a real time broadcast feature that allows users who are eyewitnesses to life threatening situations to record/broadcast live.</p>
                     <button className='btn'>Learn More</button>
@@ -40,13 +40,13 @@ const Offer = () => {
 
 
             <div className="offers-container last">
-                <div className="left gap">
+                <div className="gap">
                     <h1 className='big-heading'>CALL LOCAL AUTHORITY</h1>
                     <p>The Call Local Authority feature allows users to make distress calls to the nearest local authority within user location.</p>
                     <button className='btn'>Learn More</button>
                 </div>
 
-                <div className="right">
+                <div className='offer-image'>
                     <img src="images/what-we-offer.svg" alt="Ambulance-image" />
                 </div>
             </div>
