@@ -21,6 +21,8 @@ const Navbar = () => {
             </ul>
           </nav>
 
+          <i class="uil uil-bars nav-open"></i>
+
         </div>
       </div>
 

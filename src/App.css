@@ -97,5 +97,9 @@ p{
 
 
 
-
+@media (max-width:1080px) {
+    p{
+        font-size: 13px ;
+    }
+}
 
