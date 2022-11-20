@@ -58,8 +58,8 @@ const Founders = () => {
 
               breakpoints={{
                 // when window width is >= 640px
-                320: {
-                  width: 320,
+                400: {
+                  width: 400,
                   slidesPerView: 1,
                 },
                 // when window width is >= 768px
