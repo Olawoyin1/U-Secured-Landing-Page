@@ -51,15 +51,15 @@ const Founders = () => {
             <div className="founder-container">
             <Swiper 
               watchSlidesProgress={true} 
-              slidesPerView={3} 
+              // slidesPerView={3} 
               // className="mySwiper">
               spaceBetween={90}
 
 
               breakpoints={{
                 // when window width is >= 640px
-                400: {
-                  width: 400,
+                500: {
+                  width: 500,
                   slidesPerView: 1,
                 },
                 // when window width is >= 768px
