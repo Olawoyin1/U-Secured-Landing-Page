@@ -185,6 +185,10 @@
         justify-content: center;
         margin-top: 30px;
     }
+
+    .col-3{
+        gap: 80px;
+    }
 }
 
 
