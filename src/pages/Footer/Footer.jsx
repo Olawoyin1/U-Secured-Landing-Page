@@ -1,67 +1,57 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./style.css"
+import "./footer.css"
 
 const Footer = () => {
   return (
-    <div className='footer'>
-        <div className="container footer-flex">
-            <div className="left">
-                <div className="logo">
-                    <img src="images/footer-image.png" alt="" />
-                    <h3>U-Secured</h3>
-                </div>
-
-                <div className="footer-text">
-                    <p>U-Secured is a Safety Tech App owned by Sphere.co developed for Safety and Health Emergency Responses. The app allows users to access ambulance services, place direct calls to local authority and live capture of eyewitness experiences.  <br/> U-Secured seeks to provide a Safer and More habitable environment for Individuals</p>
-                </div>
-
-                <small>U-Secured 2022 Sphere.co</small>
+    <div className="footer">
+        <div className="container footer-container">
+            <div className="footer-waitlist-container">
+                <h3>Get ready for the big launch.</h3>
+                <button className="btn2">Join The Waitlist</button>
             </div>
-
-            <div className="right">
-                <div className="col-3">
-                    <div className="col">
-                        <h3>Company</h3>
-                        <Link to={"/"}>FAQS</Link>
-                        <Link to={"/"}>About</Link>
-                    </div>
-                    <div className="col">
-                        <h3>Legal</h3>
-                        <Link to={"/"}>Terms</Link>
-                        <Link to={"/"}>Privacy Policy</Link>
-                    </div>
-                    <div className="col">
-                        <h3>Contact</h3>
-                        <Link to={"/"}>Email</Link>
-                        <Link to={"/"}>Phone</Link>
+            <div className="footer-grid">
+                <div className="footer-content">
+                   
+                    <img src="images/u-secured-logo.png" alt="" />
+                    
+                    <p>U-Secured is a Safety Tech App owned by Sphere.co Developed for Safety and HealthEmergency Responses. The app allows users to access ambulance services, place.... <button className="btn3">Read More</button></p>
+                    <div className="socials">
+                        <span>icons here</span>
                     </div>
                 </div>
+                <div className="others">
+                    <div className="col-3">
 
+                        <div className="each">
+                            <h3>Company</h3>
+                            <a href="">About Us</a>
+                            <a href="">FAQs</a>
+                        </div>
+                        <div className="each">
+                            <h3>Legal</h3>
+                            <a href="">Terms of Use</a>
+                            <a href="">Privacy Policy</a>
+                        </div>
+                        <div className="each">
+                            <h3>Contact Us</h3>
+                            <div className="flex">
+                                <a href="">Tel</a>
+                                <p className="color">310-5437-2766</p>
+                            </div>
+                            <div className="flex">
+                                <a href="">Mail</a>
+                                <p className="color">usecured@mail.com</p>
+                            </div>
+                        </div>
 
-                        
-
-                
-
-                <div className="socials">
-                    <img src="images/follow.png" alt="" />
-                    <div className="icons">
-                        <a className='social-links' target={"blank"} href="https://mobile.twitter.com/U_secured">
-                            <img src="images/twitter.png" alt="" />
-                        </a>
-                        <a className='social-links' target={"blank"} href="">
-                            <img src="images/facebook.png" alt="" />
-                        </a>
-                        <a className='social-links' target={"blank"} href="https://www.linkedin.com/in/u-secured-750b1a237">
-                            <img src="images/linkedin.png" alt="" />
-                        </a>
-                        <a className='social-links'  target={"blank"}href="https://www.instagram.com/Usecured_">
-                            <img src="images/instagram.png" alt="" />
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        <small className="muted end">&copy;2022 U-Connect, All Rights Reserved</small>
     </div>
   )
 }

@@ -2,20 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cera Pro';
+    font-family: poppins;
     /* border: 1px solid red; */
 }
 
+
 @font-face {
     font-family: poppins;
-    src: url("/src/fonts/Poppins-Regular.ttf");
+    src: url('./fonts/Poppins-Regular.ttf');
 }
 
-img{
-    max-width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    /* height: 100%; */
+
+
+@font-face {
+    font-family: poppins;
+    src: url('./fonts/Poppins-Bold.ttf');
+    font-weight: 500;
 }
 
 .container{
@@ -23,84 +25,62 @@ img{
     margin: 0 auto;
 }
 
-.btn{
-    border: none;
-    padding: 10px;
-    background-color: #00BFFF;
-    color: #ffffff;
-    outline: none;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-.btn:hover{
-    border: 1px solid #00BFFF;
-    background-color: transparent;
-    color: #00BFFF;
-    /* font-weight: bold; */
-    transition: 200ms ;
-    /* transition: 1s ease-in-out; */
-}
-
-.btn2{
-    padding: 20px 30px;
-    background: #FDFDFD;
-    color: #D51A00;
-    border: 4px solid #009FD5;
-    border-radius: 8px;
-    /* position: relative; */
-    font-size: 25px;
-    font-weight: bold;
-    box-shadow: 10px 10px #00BFFF;
+img{
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 p{
-    font-weight: 500;
-    letter-spacing: 1.7px;
-    font-size: 17px;
+    font-size: 15px;
 }
 
-.bold-text{
-    font-size: 3.5rem;
-    letter-spacing: 2px;
-    color: #00BFFF;
-    margin-top: 1rem;
+
+.btn{
+    padding: 10px 16px;
+    border: none;
+    outline: none;
+    background-color: #4087EA;
+    font-family: inherit;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
 }
 
-.big-heading{
-    font-size: 3rem;
-    color: #00BFFF;
-    width: 350px;
+.btn:hover{
+    background-color: transparent;
+    color: #4087EA;
     font-weight: 500;
+    border: 1px solid #4087EA;
 }
 
-.muted{
-    color: #686868;
-    font-weight: 500;
+.btn2{
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #4087EA;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.btn3{
+    border: none;
+    color: #4087EA;
+    cursor: pointer;
+    background-color: transparent;
     
 }
 
+.offer-btn{
+    border: none;
+    background-color: transparent;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width:1080px) {
-    p{
-        font-size: 13px ;
-        letter-spacing: normal;
-    }
+.color{
+    color: #4087EA;
 }
 

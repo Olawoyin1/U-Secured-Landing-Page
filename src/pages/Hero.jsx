@@ -10,10 +10,7 @@ const Hero = () => {
   return (
     <section className='showcase'>
       <Showcase />
-      <About />
       <Offer />
-      <Founders />
-      <Mobile />
       <Footer />
    
     </section>

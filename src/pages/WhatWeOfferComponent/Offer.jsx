@@ -1,59 +1,52 @@
 import React from 'react'
-import "./style.css"
+import "./offer.css"
 
 const Offer = () => {
   return (
-    <div className='offers'>
-        <div className="container">
-            
-            <div className="header">
-                <button className='btn2 grey-shadow' >What We Offer</button>
-                <p>U-Secured offers some highly unique features designed to keep you safe and connected to other users</p>
+    <div class="what-we-offer">
+    <div class="container what-we-offer-container">
+        <div class="offer-header">
+            <div class="header-content">
+                <h1>How we make the world a safer place</h1>
+                <p>U-secured offers some highly unique features designed to keep you safe and connected to other users.</p>
             </div>
+        </div>
 
-            <div className="offers-container">
-                <div className="gap">
-                    <h1 className='big-heading'>CALL FOR AMBULANCE</h1>
-                    <p>The Call For Ambulance feature allows users access to several ambulance services with users’ location.</p>
-                    <button className='btn'>Learn More</button>
-                </div>
-
-                <div className='offer-image'>
-                    <img src="images/ambulance.svg" alt="Ambulance-image" />
-                </div>
+        <div class="col-2">
+            <div class="col-image">
+                <img src="images/ambulance.png" alt="" />
             </div>
-
-            <img className='arrow1' src="images/arrow1.png" alt="" />
-
-            <div className="offers-container">
-                <div className='offer-image'>
-                    <img src="images/live.svg" alt="" />
-                </div>
-                <div className="gap">
-                <h1 className='big-heading'>GO LIVE</h1>
-                    <p>The Go-Live Is a real time broadcast feature that allows users who are eyewitnesses to life threatening situations to record/broadcast live.</p>
-                    <button className='btn'>Learn More</button>
-                </div>
+            <div class="col-content">
+                <h2 class="col-headings">Call For Ambulance</h2>
+                <p>The Call For Ambulance feature allows users access to several ambulance services with users' location.</p>
+                <button class="offer-btn">Learn more</button>
             </div>
+        </div>
 
-            <img className='arrow2' src="images/arrow2.png" alt="" />
-
-
-            <div className="offers-container last">
-                <div className="gap">
-                    <h1 className='big-heading'>CALL LOCAL AUTHORITY</h1>
-                    <p>The Call Local Authority feature allows users to make distress calls to the nearest local authority within user location.</p>
-                    <button className='btn'>Learn More</button>
-                </div>
-
-                <div className='offer-image'>
-                    <img src="images/what-we-offer.svg" alt="Ambulance-image" />
-                </div>
+        <div class="col-2 reverse">
+            <div class="col-content live-cont">
+                <h2 class="col-headings">Live Broadcast</h2>
+                <p>The Call For Ambulance feature allows users access to several ambulance services with users' location.</p>
+                <button class="offer-btn">Learn more</button>
             </div>
+            <div class="col-image live-broadcast">
+                <img src="images/live.png" alt="" />
+            </div>
+        </div>
 
+        <div class="col-2">
+            <div class="col-image">
+                <img src="images/local-authority.png" alt="" />
+            </div>
+            <div class="col-content">
+                <h2 class="col-headings">Reach Local Authorities</h2>
+                <p>The Call For Ambulance feature allows users access to several ambulance services with users' location.</p>
+                <button class="offer-btn">Learn more</button>
+            </div>
         </div>
 
     </div>
+</div>
   )
 }
 
