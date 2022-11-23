@@ -57,6 +57,33 @@
     transform: translate(-50%);
 }
 
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.socials a{
+    width: 40px;
+    height: 40px;
+    background-color: #E5ECFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms ease-in-out;
+}
+
+.socials a:hover{
+    background-color: transparent;
+    border: 1px solid #4087EA;
+    transform: translateY(-5px);
+}
+
+.socials a .uil{
+    color: #4087EA;
+}
+
 
 
 
@@ -117,6 +144,7 @@
         flex-direction: column;
         gap: 30px;
         text-align: center;
+        padding: 30px;
     }
 
     .col-3{

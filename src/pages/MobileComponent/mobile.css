@@ -21,6 +21,10 @@
     overflow-x: auto;
 }
 
+.mobile-image-container::-webkit-scrollbar{
+    width: 0;
+}
+
 .mobile-image-container::after{
     content: "";
     position: absolute;

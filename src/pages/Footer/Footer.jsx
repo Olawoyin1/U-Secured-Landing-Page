@@ -17,7 +17,18 @@ const Footer = () => {
                     
                     <p>U-Secured is a Safety Tech App owned by Sphere.co Developed for Safety and HealthEmergency Responses. The app allows users to access ambulance services, place.... <button className="btn3">Read More</button></p>
                     <div className="socials">
-                        <span>icons here</span>
+                        <a href="" target={'blank'}>
+                            <i className="uil uil-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/Usecured_" target={'blank'}>
+                            <i className="uil uil-instagram"></i>
+                        </a>
+                        <a href="https://mobile.twitter.com/U_secured" target={'blank'}>
+                            <i className="uil uil-twitter-alt"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/u-secured-750b1a237" target={'blank'}>
+                        <i className="uil uil-linkedin-alt"></i>
+                        </a>
                     </div>
                 </div>
                 <div className="others">
