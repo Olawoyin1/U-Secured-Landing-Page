@@ -11,6 +11,7 @@ const Hero = () => {
     <section className='showcase'>
       <Showcase />
       <Offer />
+      <Mobile />
       <Footer />
    
     </section>
