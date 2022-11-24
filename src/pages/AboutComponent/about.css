@@ -175,4 +175,11 @@
     .about-arrow{
         width: 90px;
     }
+
+    
+    .bigger-box{
+        width: 100%;
+        padding: 35px ;
+        padding-bottom: 90px;
+    }
 }
