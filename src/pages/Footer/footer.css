@@ -151,6 +151,10 @@
         gap: 40px;
     }
 
+    .footer-content img{
+        width: 150px;
+    }
+
 }
 
 
