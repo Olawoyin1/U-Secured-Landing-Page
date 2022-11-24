@@ -180,6 +180,7 @@
     .bigger-box{
         width: 100%;
         padding: 35px ;
+        padding-top: 60px;
         padding-bottom: 90px;
     }
 }
