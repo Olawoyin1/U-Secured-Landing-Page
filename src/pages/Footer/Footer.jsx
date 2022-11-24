@@ -52,7 +52,7 @@ const Footer = () => {
                             </div>
                             <div className="flex">
                                 <a href="">Mail</a>
-                                <p className="color">usecured.safety.ng@outlook.com</p>
+                                <p className="color email">usecured.safety.ng@outlook.com</p>
                             </div>
                         </div>
 

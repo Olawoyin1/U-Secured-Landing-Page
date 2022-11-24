@@ -1,5 +1,6 @@
 .footer{
     min-height: 550px;
+    overflow: hidden;
     padding: 50px 0;
     position: relative;
 }
@@ -83,6 +84,9 @@
 .socials a .uil{
     color: #4087EA;
 }
+
+
+
 
 
 
