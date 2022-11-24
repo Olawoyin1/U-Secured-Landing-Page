@@ -7,6 +7,10 @@
 }
 
 
+html{
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: poppins;
     src: url('./fonts/Poppins-Regular.ttf');
