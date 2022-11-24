@@ -48,6 +48,10 @@
     .logo img{
         width: 150px;
     }
+
+    .links{
+        gap: 2rem;
+    }
 }
 
 
