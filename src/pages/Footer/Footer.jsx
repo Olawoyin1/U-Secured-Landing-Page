@@ -48,11 +48,11 @@ const Footer = () => {
                             <h3>Contact Us</h3>
                             <div className="flex">
                                 <a href="">Tel</a>
-                                <p className="color">310-5437-2766</p>
+                                <p className="color">+234 916 1661 731</p>
                             </div>
                             <div className="flex">
                                 <a href="">Mail</a>
-                                <p className="color">usecured@mail.com</p>
+                                <p className="color">usecured.safety.ng@outlook.com</p>
                             </div>
                         </div>
 
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
 
 
-        <small className="muted end">&copy;2022 U-Connect, All Rights Reserved</small>
+        <small className="muted end">&copy;2022 U-Secured, All Rights Reserved</small>
     </div>
   )
 }

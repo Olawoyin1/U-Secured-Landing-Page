@@ -11,7 +11,7 @@ const Showcase = () => {
     <div className="hero">
       <div className="container hero-container">
         <div className="hero-content">
-            <h1 className='bold'>Safety made just for <span className="color">you</span></h1>
+            <h1 className='bold'>Safety made <br /> just for <span className="color">you</span></h1>
             <p>The Safety tech built to keep you safe and connected with other users around the globe</p>
             <div className='waitlist-arrow'>
               <button className="btn">Join The Waitlist</button>
