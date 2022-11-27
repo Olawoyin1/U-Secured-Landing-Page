@@ -52,8 +52,8 @@ const WaitlistScreen = () => {
             </div>
             </div>
             <div class="col-image live-broadcast">
-                <img className='waitlist-large-image' src="images/waitlist.png" alt="" />
-                <img className="mobile-waitlist-image" src="images/waitlist-mobile-image.png" alt="" />
+                <img className='large-screen' src="images/waitlist.png" alt="" />
+                <img className="mobile-screen" src="images/waitlist-mobile-image.png" alt="" />
             </div>
         </div>
 
