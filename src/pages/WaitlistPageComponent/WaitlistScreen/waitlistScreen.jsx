@@ -15,44 +15,45 @@ const WaitlistScreen = () => {
               <p>We’ll let you know when eveything’s ready</p>
 
 
-        <div className="countdown">
+            <div className="countdown">
 
-          <div className="countdown-el">
-            <h1>04</h1>
-            <small className="muted">MONTHS</small>
-          </div>
+              <div className="countdown-el">
+                <h1>04</h1>
+                <small className="muted">MONTHS</small>
+              </div>
 
-          <span className='big-colon'>:</span>
+              <span className='big-colon'>:</span>
 
-          <div className="countdown-el">
-            <h1>09</h1>
-            <small className="muted">DAYS</small>
-          </div>
+              <div className="countdown-el">
+                <h1>09</h1>
+                <small className="muted">DAYS</small>
+              </div>
 
-          <span className='big-colon'>:</span>
+              <span className='big-colon'>:</span>
 
-          <div className="countdown-el">
-            <h1>13</h1>
-            <small className="muted">HOURS</small>
-          </div>
+              <div className="countdown-el">
+                <h1>13</h1>
+                <small className="muted">HOURS</small>
+              </div>
 
-          <span className='big-colon'>:</span>
+              <span className='big-colon'>:</span>
 
-          <div className="countdown-el">
-            <h1>34</h1>
-            <small className="muted">MINUTES</small>
-          </div>
+              <div className="countdown-el">
+                <h1>34</h1>
+                <small className="muted">MINUTES</small>
+              </div>
 
-          <span className='big-colon'>:</span>
+              <span className='big-colon'>:</span>
 
-          <div className="countdown-el">
-            <h1 className='color'>59</h1>
-            <small className="muted color"><b>SECONDS</b></small>
-          </div>
-        </div>
+              <div className="countdown-el">
+                <h1 className='color'>59</h1>
+                <small className="muted color"><b>SECONDS</b></small>
+              </div>
+            </div>
             </div>
             <div class="col-image live-broadcast">
-                <img src="images/waitlist.png" alt="" />
+                <img className='waitlist-large-image' src="images/waitlist.png" alt="" />
+                <img className="mobile-waitlist-image" src="images/waitlist-mobile-image.png" alt="" />
             </div>
         </div>
 

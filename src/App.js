@@ -21,7 +21,7 @@ function App() {
               <Route path='features' element={<Features />}/>
               <Route path='news' element={<News />}/>
               <Route path='contact' element={<Contact />}/>
-              <Route path='join_waitlist' element={<Waitlist />}/>
+              <Route path='join-waitlist' element={<Waitlist />}/>
               <Route path='*' element={<ErrorPage />}/>
           </Route>
         </Routes>

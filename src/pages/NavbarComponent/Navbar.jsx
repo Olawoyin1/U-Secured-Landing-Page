@@ -21,7 +21,7 @@ const Navbar = () => {
               <li><a href="">Features</a></li>
               <li><a href="">News</a></li>
               <li><a href="">Contact</a></li>
-              <Link to={"join_waitlist"} className="btn last">Join the waitlist</Link>
+              <Link to={"join-waitlist"} className="btn last">Join the waitlist</Link>
           </ul>
 
           <HiBars3BottomRight className='menu' />
