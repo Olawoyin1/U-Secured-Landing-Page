@@ -70,3 +70,19 @@
     }
         
 } */
+
+
+
+@media (max-width:920px) {
+    .waitlist-container .bold{
+        font-size: 47px;
+    }
+    
+}
+
+
+@media (max-width:294px){
+    .waitlist-container .bold{
+        font-size:30px;
+    }
+}
