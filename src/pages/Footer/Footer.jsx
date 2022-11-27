@@ -8,7 +8,9 @@ const Footer = () => {
         <div className="container footer-container">
             <div className="footer-waitlist-container">
                 <h3>Get ready for the big launch.</h3>
-                <button className="btn2">Join The Waitlist</button>
+                <button className="btn2">
+                    <Link to={"join-waitlist"} className="btn2 last">Join the waitlist</Link>
+                </button>
             </div>
             <div className="footer-grid">
                 <div className="footer-content">

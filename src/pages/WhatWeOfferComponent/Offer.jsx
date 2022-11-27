@@ -16,7 +16,7 @@ const Offer = () => {
         <div class="col-2">
             <div class="col-image">
                 <img className='large-screen' src="images/ambulance.png" alt="" />
-                <img className='mobile-screen' src="images/ambulance-mobile.png" alt="" />
+                <img className='mobile-screen' src="images/ambulance-mobile.svg" alt="" />
             </div>
             <div class="col-content">
                 <h2 class="col-headings">Call For Ambulance</h2>
@@ -33,14 +33,14 @@ const Offer = () => {
             </div>
             <div class="col-image live-broadcast">
                 <img className='large-screen' src="images/live.png" alt="" />
-                <img className='mobile-screen' src="images/live-mobile.png" alt="" />
+                <img className='mobile-screen' src="images/live-mobile.svg" alt="" />
             </div>
         </div>
 
         <div class="col-2">
             <div class="col-image">
                 <img className='large-screen' src="images/local-authority.png" alt="" />
-                <img className='mobile-screen' src="images/authority-mobile.png" alt="" />
+                <img className='mobile-screen' src="images/authority-mobile.svg" alt="" />
             </div>
             <div class="col-content">
                 <h2 class="col-headings">Reach Local Authorities</h2>

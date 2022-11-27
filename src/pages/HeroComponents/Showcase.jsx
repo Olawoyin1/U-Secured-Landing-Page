@@ -26,7 +26,7 @@ const Showcase = () => {
         <div className="hero-section-image">
 
           <img className='large-screen' src="images/hero-image.png" alt="" />
-          <img className='mobile-screen' src="images/hero-mobile-image.png" alt="" />
+          <img className='mobile-screen' src="images/hero-mobile.svg" alt="" />
 
         </div>
 

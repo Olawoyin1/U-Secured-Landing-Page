@@ -9,7 +9,8 @@ const AwaitingForm = () => {
        
             <div class="col-2">
                 <div class="col-image">
-                    <img src="images/form-image.png" alt="" />
+                    <img className='large-screen' src="images/form-image.png" alt="" />
+                    <img className='mobile-screen' src="images/awaiting-mobile.svg" alt="" />
                 </div>
                 <div class="col-content">
                 <form action="">
