@@ -15,7 +15,8 @@ const Offer = () => {
 
         <div class="col-2">
             <div class="col-image">
-                <img src="images/ambulance.png" alt="" />
+                <img className='large-screen' src="images/ambulance.png" alt="" />
+                <img className='mobile-screen' src="images/ambulance-mobile.png" alt="" />
             </div>
             <div class="col-content">
                 <h2 class="col-headings">Call For Ambulance</h2>
@@ -31,13 +32,15 @@ const Offer = () => {
                 <button class="offer-btn color">Learn more  <HiArrowLongRight /></button>
             </div>
             <div class="col-image live-broadcast">
-                <img src="images/live.png" alt="" />
+                <img className='large-screen' src="images/live.png" alt="" />
+                <img className='mobile-screen' src="images/live-mobile.png" alt="" />
             </div>
         </div>
 
         <div class="col-2">
             <div class="col-image">
-                <img src="images/local-authority.png" alt="" />
+                <img className='large-screen' src="images/local-authority.png" alt="" />
+                <img className='mobile-screen' src="images/authority-mobile.png" alt="" />
             </div>
             <div class="col-content">
                 <h2 class="col-headings">Reach Local Authorities</h2>

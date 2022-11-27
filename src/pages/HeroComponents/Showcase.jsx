@@ -23,7 +23,13 @@ const Showcase = () => {
             </div>
         </div>
 
-          <img src="images/hero-image.png" alt="" />
+        <div className="hero-section-image">
+
+          <img className='large-screen' src="images/hero-image.png" alt="" />
+          <img className='mobile-screen' src="images/hero-mobile-image.png" alt="" />
+
+        </div>
+
          
 
           <a href="" className='arrow arrow-pc'>

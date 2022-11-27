@@ -15,7 +15,7 @@
     line-height: 1.2;
 }
 
-.mobile-waitlist-image{
+.mobile-screen{
     display: none;
 }
 
@@ -76,11 +76,11 @@
 } */
 
 @media (max-width:850px){
-    .mobile-waitlist-image{
+    .mobile-screen{
         display: block;
     }
 
-    .waitlist-large-image{
+    .large-screen{
         display: none;
     }
 }
