@@ -1,5 +1,7 @@
 import React from 'react'
 import "./about.css"
+import { HiChevronRight } from "react-icons/hi2";
+import { HiChevronLeft } from "react-icons/hi2";
 
 const About = () => {
   return (
@@ -11,10 +13,10 @@ const About = () => {
           <h1>All about <br/>  U-secured</h1>
           <div className="buttons">
             <button>
-              <i className="uil uil-arrow-left"></i>
+              <HiChevronLeft />
             </button>
             <button>
-              <i className="uil uil-arrow-right"></i>
+              <HiChevronRight />
             </button>
           </div>
         </div>

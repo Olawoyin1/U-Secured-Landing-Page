@@ -1,0 +1,65 @@
+.waitlist-bg{
+    background-color: #ffffff;
+}
+
+
+.hero img{
+    max-width: 100%;
+    height: 100%;
+}
+
+
+.countdown{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    /* display: none;/ */
+    /* max-width: 100%; */
+}
+
+
+.countdown-el{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.countdown-el small{
+    font-size: 14px;
+}
+
+.big-colon{
+    font-size: 30px;
+}
+
+
+
+
+@media (max-width:500px) {
+    .countdown{
+        gap: 3px;
+    }
+    .countdown-el h1{
+        font-size: 30px;
+    }
+    
+}
+
+
+@media (max-width:400px) {
+   
+    .countdown-el h1{
+        font-size: 20px;
+    }
+
+    
+    .countdown-el small{
+        font-size: 10px;
+    }
+
+    .big-colon{
+        font-size: 20px;
+    }
+        
+}

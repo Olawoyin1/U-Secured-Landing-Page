@@ -31,9 +31,17 @@
     margin-left: auto;
 }
 
-.last{
+.links .last{
     margin-left: auto;
+    color: #fff;
 }
+
+.links .last:hover{
+    margin-left: auto;
+    color: #4087EA;
+}
+
+
 
 .menu{
     font-size: 25px;

@@ -171,6 +171,7 @@
 @media (max-width:500px){
     .box{
         width: 90%;
+        
     }
     .bigger-box{
         width: 100%;
@@ -188,3 +189,4 @@
         padding-bottom: 90px;
     }
 }
+

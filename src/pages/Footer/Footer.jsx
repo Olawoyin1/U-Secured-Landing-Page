@@ -15,7 +15,7 @@ const Footer = () => {
                    
                     <img src="images/u-secured-logo.png" alt="" />
                     
-                    <p>U-Secured is a Safety Tech App owned by Sphere.co Developed for Safety and HealthEmergency Responses. The app allows users to access ambulance services, place.... <button className="btn3">Read More</button></p>
+                    <p className='muted'>U-Secured is a Safety Tech App owned by Sphere.co Developed for Safety and HealthEmergency Responses. The app allows users to access ambulance services, place.... <button className="btn3">Read More</button></p>
                     <div className="socials">
                         <a href="" target={'blank'}>
                             <i className="uil uil-facebook-f"></i>

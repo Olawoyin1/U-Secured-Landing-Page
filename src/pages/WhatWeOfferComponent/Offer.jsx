@@ -1,5 +1,6 @@
 import React from 'react'
 import "./offer.css"
+import { HiArrowLongRight } from "react-icons/hi2";
 
 const Offer = () => {
   return (
@@ -19,7 +20,7 @@ const Offer = () => {
             <div class="col-content">
                 <h2 class="col-headings">Call For Ambulance</h2>
                 <p>The Call For Ambulance feature allows users access to several ambulance services with users' location.</p>
-                <button class="offer-btn color">Learn more  <i class="uil uil-arrow-right"></i></button>
+                <button class="offer-btn color">Learn more   <HiArrowLongRight /></button>
             </div>
         </div>
 
@@ -27,7 +28,7 @@ const Offer = () => {
             <div class="col-content live-cont">
                 <h2 class="col-headings">Live Broadcast</h2>
                 <p>The Call For Ambulance feature allows users access to several ambulance services with users' location.</p>
-                <button class="offer-btn color">Learn more  <i class="uil uil-arrow-right"></i></button>
+                <button class="offer-btn color">Learn more  <HiArrowLongRight /></button>
             </div>
             <div class="col-image live-broadcast">
                 <img src="images/live.png" alt="" />
@@ -41,7 +42,7 @@ const Offer = () => {
             <div class="col-content">
                 <h2 class="col-headings">Reach Local Authorities</h2>
                 <p>The Call For Ambulance feature allows users access to several ambulance services with users' location.</p>
-                <button class="offer-btn color">Learn more  <i class="uil uil-arrow-right"></i></button>
+                <button class="offer-btn color">Learn more  <HiArrowLongRight /></button>
             </div>
         </div>
 

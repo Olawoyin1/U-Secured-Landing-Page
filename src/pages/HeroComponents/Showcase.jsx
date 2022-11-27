@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./showcase.css"
-import { motion } from 'framer-motion'
+import { HiArrowLongDown } from "react-icons/hi2";
 
 
 
@@ -9,15 +9,15 @@ import { motion } from 'framer-motion'
 const Showcase = () => {
   return (
     <div className="hero">
-      <div className="container hero-container">
+      <div className="container reverse-grid">
         <div className="hero-content">
             <h1 className='bold'>Safety made <br /> just for <span className="color">you</span></h1>
             <p>The Safety tech built to keep you safe and connected with other users around the globe</p>
             <div className='waitlist-arrow'>
-              <button className="btn">Join The Waitlist</button>
+              <Link to={"join_waitlist"} className="btn last">Join the waitlist</Link>
               
               <a href="" className=' arrow-mobile'>
-                <i className="uil uil-arrow-down"></i>
+                <HiArrowLongDown />
               </a>
 
             </div>
@@ -27,7 +27,7 @@ const Showcase = () => {
          
 
           <a href="" className='arrow arrow-pc'>
-            <i className="uil uil-arrow-down"></i>
+            <HiArrowLongDown />
           </a>
       </div>
 
