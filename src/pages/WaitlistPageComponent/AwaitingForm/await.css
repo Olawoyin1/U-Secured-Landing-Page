@@ -9,16 +9,16 @@
 }
 
 
-.await-content form{
+.col-content form{
     width: 100%;
 }
 
-.await-content form h3{
+.col-content form h3{
     margin-bottom: 30px;
     font-size: 30px;
 }
 
-.awaiting-list form input{
+.col-content form input{
     width: 100%;
     display: block;
     border: none;
@@ -31,7 +31,7 @@
 
 .input-field select{
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     background-color: #F2F2FD;
     outline: none;
     border: none;
@@ -45,6 +45,16 @@
 .input-flex{
     display: flex;
     gap: 25px;
+    /* background-color: red; */
+}
+
+.input-flex select{
+    outline: none;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #F2F2FD;
+
 }
 
 .form-buttons{
@@ -54,6 +64,7 @@
     gap: 20px;
     justify-content: center;
     align-items: flex-end;
+    margin-top: 20px;
 }
 
 .btn4{
@@ -71,7 +82,11 @@
 }
 
 
-
+@media (max-width:940px){
+    .col-content form h3{
+        font-size: 25px;
+    }
+}
 
 @media (max-width:850px) {
     .awaiting-list .reverse-grid{
@@ -79,4 +94,17 @@
     }
 
     
+    
+    
+    .form-buttons .btn{
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .form-buttons .btn4{
+        display: none;
+    }
 }
+
+

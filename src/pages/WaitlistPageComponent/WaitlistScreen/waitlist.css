@@ -8,6 +8,13 @@
     height: 100%;
 }
 
+.waitlist-container .bold{
+    font-size: 50px;
+    max-width: 400px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
 
 .countdown{
     display: flex;

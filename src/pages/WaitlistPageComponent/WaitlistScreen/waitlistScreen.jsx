@@ -6,10 +6,13 @@ import Countdown from 'react-countdown';
 const WaitlistScreen = () => {
   return (
     <div className="hero waitlist-bg">
-      <div className="container reverse-grid ">
-      <div className="hero-content">
-        <h1 className='bold'>Get ready for the <span className='color'>BIG</span> launch!</h1>
-        <p>We’ll let you know when eveything’s ready</p>
+      <div className="container waitlist-container">
+
+
+        <div class="col-2 reverse">
+            <div class="col-content live-cont">
+              <h1 className='bold'>Get ready for the <span className='color'>BIG</span> launch!</h1>
+              <p>We’ll let you know when eveything’s ready</p>
 
 
         <div className="countdown">
@@ -47,12 +50,11 @@ const WaitlistScreen = () => {
             <small className="muted color"><b>SECONDS</b></small>
           </div>
         </div>
-
-          
-      </div>
-
-        <img src="images/waitlist.png" alt="" />
-         
+            </div>
+            <div class="col-image live-broadcast">
+                <img src="images/waitlist.png" alt="" />
+            </div>
+        </div>
 
       
       </div>
