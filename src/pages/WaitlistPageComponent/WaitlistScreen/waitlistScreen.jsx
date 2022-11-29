@@ -22,14 +22,19 @@ const WaitlistScreen = () => {
         const distance = countDownDate - now;
 
         const month = Math.floor(distance / (24*60*60*1000)/(30))
-
+        const newmonth = month < 10 ? "0" + month : month
+        
         const days = Math.floor(distance / (24*60*60*1000)/(30))
-
+        const newdays = days < 10 ? "0" + days : days
+        
         const hours = Math.floor(distance % (24*60*60*1000)/(60*60*1000))
-
+        const newhours = hours < 10 ? "0" + hours : hours
+        
         const minutes = Math.floor(distance % (60*60*1000)/(60*1000))
-
+        const newminutes = minutes < 10 ? "0" + minutes : minutes
+        
         const seconds = Math.floor(distance % (60*1000)/(1000))
+        const newseconds = seconds < 10 ? "0" + seconds : seconds
 
         
 
@@ -38,11 +43,11 @@ const WaitlistScreen = () => {
         if(distance < 0){
           clearInterval(interval.current)
         }else{
-          setMonth(month);
-          setDays(days);
-          setHours(hours);
-          setMinutes(minutes);
-          setSeconds(seconds);
+          setMonth(newmonth);
+          setDays(newdays);
+          setHours(newhours);
+          setMinutes(newminutes);
+          setSeconds(newseconds);
         }
 
 
