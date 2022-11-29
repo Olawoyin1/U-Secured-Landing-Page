@@ -4,10 +4,10 @@ import Navbar from '../pages/NavbarComponent/Navbar'
 
 const SharedLayout = () => {
   return (
-    <div>
+    <>
         <Navbar />
         <Outlet />
-    </div>
+    </>
   )
 }
 

@@ -43,6 +43,10 @@ p{
     font-size: 15px;
 }
 
+option{
+    padding: 10px;
+}
+
 
 .btn{
     padding: 10px 16px;
@@ -93,6 +97,28 @@ p{
 
 
 
+.buttons > button{
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1.3px solid #fff;
+    color: #fff;
+    transition: 200ms ease-in-out;
+}
+
+.buttons > button:hover{
+    background-color: #fff;
+    color: #4087EA;
+}
+
+
+
 .color{
     color: #4087EA;
 }
@@ -101,3 +127,42 @@ p{
     opacity: 0.7;
 }
 
+
+.mobile-screen{
+    display: none;
+}
+
+
+.reverse{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "box-a box-b";
+
+}
+
+
+.box-a{
+    grid-area: box-a;
+}
+
+.box-b{
+    grid-area: box-b;
+}
+
+
+
+.waitlist-component .footer-waitlist-container{
+    display: none;
+}
+
+
+@media (max-width:500px){
+    .mobile-screen{
+        display: block;
+    }
+
+    .large-screen{
+        display: none;
+    }
+}

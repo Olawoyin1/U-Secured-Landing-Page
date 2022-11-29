@@ -5,7 +5,7 @@ import WaitlistScreen from "../WaitlistPageComponent/WaitlistScreen/waitlistScre
 
 const Waitlist = () => {
   return (
-    <div>
+    <div className='waitlist-component'>
       <WaitlistScreen />
       <AwaitingForm />
       <Footer />

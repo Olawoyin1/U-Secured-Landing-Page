@@ -15,7 +15,7 @@ const Offer = () => {
 
         <div class="col-2">
             <div class="col-image">
-                <img className='large-screen' src="images/ambulance.png" alt="" />
+                <img className='large-screen' src="images/ambulance-large.svg" alt="" />
                 <img className='mobile-screen' src="images/ambulance-mobile.svg" alt="" />
             </div>
             <div class="col-content">
@@ -32,14 +32,14 @@ const Offer = () => {
                 <button class="offer-btn color">Learn more  <HiArrowLongRight /></button>
             </div>
             <div class="col-image live-broadcast">
-                <img className='large-screen' src="images/live.png" alt="" />
+                <img className='large-screen' src="images/live.svg" alt="" />
                 <img className='mobile-screen' src="images/live-mobile.svg" alt="" />
             </div>
         </div>
 
         <div class="col-2">
             <div class="col-image">
-                <img className='large-screen' src="images/local-authority.png" alt="" />
+                <img className='large-screen' src="images/authority-large.svg" alt="" />
                 <img className='mobile-screen' src="images/authority-mobile.svg" alt="" />
             </div>
             <div class="col-content">

@@ -1,8 +1,7 @@
 .footer{
-    min-height: 550px;
+    /* min-height: 400px; */
     overflow: hidden;
-    padding: 50px 0;
-    position: relative;
+    padding: 80px 0;
 }
 
 .footer-waitlist-container{
@@ -17,9 +16,14 @@
     margin-bottom: 50px;
 }
 
+.footer-container{
+    position: relative;
+    padding-bottom: 50px;
+
+}
+
 .footer-grid{
     display: grid;
-    /* grid-gap: 10px; */
     grid-template-columns: 2fr 1.5fr;
 }
 
@@ -33,7 +37,6 @@
 
 .col-3{
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     grid-gap: 10px;
 }
@@ -55,7 +58,7 @@
 .end{
     position: absolute;
     left: 50%;
-    bottom: 50px;
+    bottom: 0px;
     transform: translate(-50%);
 }
 

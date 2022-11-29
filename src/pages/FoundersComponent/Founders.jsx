@@ -51,18 +51,14 @@ const Founders = () => {
             <div className="founder-container">
             <Swiper 
               watchSlidesProgress={true} 
-              // slidesPerView={3} 
-              // className="mySwiper">
               spaceBetween={90}
 
 
               breakpoints={{
-                // when window width is >= 640px
                 500: {
                   width: 500,
                   slidesPerView: 1,
                 },
-                // when window width is >= 768px
                 768: {
                   width: 768,
                   slidesPerView: 2,
@@ -76,17 +72,7 @@ const Founders = () => {
               }}
 
 
-              // spaceBetween={30}
-              // slidesPerGroup={3}
-              // loop={true}
               freeMode={true}
-              // loopFillGroupWithBlank={true}
-              
-              // navigation={true}
-              // modules={[Pagination, Navigation]}
-              // className="mySwiper"
-
-              // centeredSlides={true}
               navigation={true}
               modules={[Autoplay, Pagination, Navigation]}
               className="mySwiper"

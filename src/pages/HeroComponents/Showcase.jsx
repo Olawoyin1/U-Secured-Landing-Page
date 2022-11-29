@@ -9,7 +9,7 @@ import { HiArrowLongDown } from "react-icons/hi2";
 const Showcase = () => {
   return (
     <div className="hero">
-      <div className="container reverse-grid">
+      <div className="container  reverse-grid">
         <div className="hero-content">
             <h1 className='bold'>Safety made <br /> just for <span className="color">you</span></h1>
             <p>The Safety tech built to keep you safe and connected with other users around the globe</p>
@@ -23,9 +23,9 @@ const Showcase = () => {
             </div>
         </div>
 
-        <div className="hero-section-image">
+        <div className="showcase-image">
 
-          <img className='large-screen' src="images/hero-image.png" alt="" />
+          <img className='large-screen' src="images/hero-large.svg" alt="" />
           <img className='mobile-screen' src="images/hero-mobile.svg" alt="" />
 
         </div>

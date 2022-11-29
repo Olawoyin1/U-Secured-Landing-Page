@@ -8,11 +8,11 @@ const Navbar = () => {
     <div className="navbar">
         <div className="container navbar-container">
           <Link className='desktop'  to={"/"}>
-            <img src="images/u-secured-logo.png" alt="" />
+            <img src="images/large-logo.svg" alt="" />
           </Link>
           
           <Link className='mobile-logo' to={"/"}>
-            <img src="images/mobile-logo.png"  alt="" />
+            <img src="images/mobile-logo.svg"  alt="" />
           </Link>
             
            
