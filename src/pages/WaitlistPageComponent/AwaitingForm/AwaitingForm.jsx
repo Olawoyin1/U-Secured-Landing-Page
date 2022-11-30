@@ -128,31 +128,38 @@ const AwaitingForm = () => {
                         </div>
 
                         <div className="input-field">
-                        <select 
-                            name="state" 
-                            id="state"
-                            onChange={handleChange}
-                        >
-                                <option value="">State of residence</option>
-                                {
-                                    States.map(state => <option value={state}>{state}</option>)
-                                }
+                            <div className="select">
+                                <select 
+                                    name="state" 
+                                    id="state"
+                                    onChange={handleChange}
+                                >
+                                    <option value="">State of residence</option>
+                                    {
+                                        States.map(state => <option value={state}>{state}</option>)
+                                    }
+                                    
+                                </select>
                                 
-                        </select>
+                            </div>
+
                         </div>
 
                         <div className="input-flex">
-                            
-                            <select 
-                                name="countryCode" 
-                                id="countryCode"
-                                onChange={handleChange}
-                            >
-                                {
-                                    phoneOpt.map(data=> <option value={data}>{data}</option>)
-                                }
+                            <div className="select">
+
+                                <select 
+                                    name="countryCode" 
+                                    id="countryCode"
+                                    onChange={handleChange}
+                                >
+                                    {
+                                        phoneOpt.map(data=> <option value={data}>{data}</option>)
+                                    }
+                                    
+                                </select>
                                 
-                            </select>
+                            </div>
                         
                             
                             <input 

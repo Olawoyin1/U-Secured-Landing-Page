@@ -16,7 +16,7 @@ const Showcase = () => {
             <div className='waitlist-arrow'>
               <Link to={"join-waitlist"} className="btn last">Join the waitlist</Link>
               
-              <a href="" className=' arrow-mobile'>
+              <a href="#footer" className=' arrow-mobile'>
                 <HiArrowLongDown />
               </a>
 
@@ -32,7 +32,7 @@ const Showcase = () => {
 
          
 
-          <a href="" className='arrow arrow-pc'>
+          <a href="#footer" className='arrow arrow-pc'>
             <HiArrowLongDown />
           </a>
       </div>
