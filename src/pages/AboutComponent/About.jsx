@@ -20,7 +20,7 @@ const About = () => {
 
     const About = AboutDatas.map(data =>{
       return(
-        <div className={data.class}>
+        <div key={data.id} className={data.class}>
           <button className='icon-btn'>
             <InfoCircle
               size="32" 
@@ -36,7 +36,7 @@ const About = () => {
 
 
   return (
-    <div className='about'>
+    <div className='about' id='about'>
       <div className="container about-container">
         <div className="box bigger-box">
           <img src="images/about-arrow.svg" className='about-arrow' alt="" />

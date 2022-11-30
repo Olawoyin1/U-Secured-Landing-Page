@@ -17,7 +17,7 @@ const Navbar = () => {
             
            
           <ul className="links">
-              <li className="first"><a href="">About Us</a></li>
+              <li className="first"><a href="#about">About Us</a></li>
               <li><a href="">Features</a></li>
               <li><a href="">News</a></li>
               <li><a href="">Contact</a></li>

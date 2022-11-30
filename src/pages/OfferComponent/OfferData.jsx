@@ -13,7 +13,7 @@ const OfferData = [
         
         An Ambulance care assistant will always be present in every Ambulance provided by U-Secured. `,
         title : "Call For Ambulance",
-        class : "col-2" 
+        classlist : "col-2" 
     },
     {
         id : 2,
@@ -27,7 +27,7 @@ const OfferData = [
         
         This broadcast will always be notified to all users so as to create more awareness on the incident happening on the Go. `,
         title : "Live Broadcast",
-        class : "col-2 reverse-col" 
+        classlist : "col-2 reverse-col" 
     },
     {
         id : 3,
@@ -40,7 +40,9 @@ const OfferData = [
 
 
         Calls from APP users will be regarded as Top priority and as such users will get instant responses from these local authorities.`,
-        class : "col-2" 
+        
+        title : "Call Local Authority",
+        classlist : "col-2" 
     },
 ]
 

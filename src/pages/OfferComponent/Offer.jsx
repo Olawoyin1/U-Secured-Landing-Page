@@ -1,39 +1,11 @@
 import React from 'react'
 import OfferData from './OfferData';
 import "./offer.css"
+import Each from './Each';
 
 const Offer = () => {
 
     const OfferDatas = OfferData
-
-    const [readMore, setReadMore] = React.useState(false)
-
-    const Offers = OfferDatas.map(data => {
-        return(
-
-            <div class={data.class}>
-                <div class="col-image">
-                    <img className='large-screen' src={data.large_screen} alt="" />
-                    <img className='mobile-screen' src={data.small_screen}alt="" />
-                </div>
-                <div class="col-content">
-                    <h2 class="col-headings">{data.title}</h2>
-                    <p> 
-                           {
-                            readMore ? data.content : `${data.content.substring(0,250)}....`
-                           }
-
-                            <button className='btn3' onClick={()=>{setReadMore(!readMore)}}>
-                                {
-                                    readMore ? "Show less" : "Read more"
-                                }
-                            </button>
-                        </p>
-                </div>
-            </div>
-
-        )
-    })
 
 
   return (
@@ -46,7 +18,16 @@ const Offer = () => {
                 </div>
             </div>
 
-            {Offers}
+            {
+                OfferDatas.map(data => {
+                    return(
+                        <Each 
+                            key={data.id}
+                            {...data}
+                        />
+                    )
+                })
+            }
 
         </div>
     </div>
