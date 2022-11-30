@@ -31,6 +31,7 @@
     gap: 2.5rem;
     list-style-type: none;
     flex-grow: 1;
+    position: relative;
 }
 
 
@@ -55,6 +56,14 @@
 .menu{
     font-size: 40px;
     display: none;
+}
+
+.close-btn{
+    display: none;
+    position: absolute;
+    top: 20px;
+    font-size: 20px;
+
 }
 
 
@@ -83,11 +92,33 @@
         display: none;
     }
 
-    .links{
-        display: none;
+    .close-btn{
+        display: block;
     }
 
     .menu{
         display: flex;
+    }
+
+    .links{
+        padding: 2rem;
+        display: block;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        right: -100%;
+        background-color: #fff;
+        transition: 400ms ease-in-out;
+        z-index: 10000;
+    }
+
+    .links.show{
+        right: 0;
+    }
+
+    .links li{
+        margin-bottom: 30px;
+        text-align: center;
     }
 }
