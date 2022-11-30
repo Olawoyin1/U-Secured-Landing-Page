@@ -102,6 +102,7 @@
 
     .links{
         padding: 2rem;
+        padding-top: 3rem;
         display: block;
         height: 100%;
         position: fixed;
@@ -118,7 +119,7 @@
     }
 
     .links li{
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         text-align: center;
     }
 }
