@@ -22,10 +22,7 @@ const About = () => {
       return(
         <div key={data.id} className={data.class}>
           <button className='icon-btn'>
-            <InfoCircle
-              size="32" 
-              color="#4087EA"
-            />
+            <i className={data.icon}></i>
             </button>
           <h3>{data.title}</h3>
           <p>{data.content}</p>

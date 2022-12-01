@@ -3,7 +3,6 @@ import React from 'react'
 const Each = ({classlist, large_screen, small_screen, title,content}) => {
 
     const [readMore, setReadMore] = React.useState(false)
-    console.log(content);
 
   return (
          <div className={classlist}>
