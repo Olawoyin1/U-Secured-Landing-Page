@@ -16,9 +16,10 @@
 
 }
 
-.links a{
+.links li  a{
     text-decoration: none;
-    color: #000;
+    /* color: #000; */
+    font-weight: 500;
 }
 
 .mobile-logo{
@@ -32,6 +33,10 @@
     list-style-type: none;
     flex-grow: 1;
     position: relative;
+}
+
+.links .last.btn{
+    color: #fff;
 }
 
 
@@ -64,6 +69,14 @@
     top: 20px;
     font-size: 20px;
 
+}
+
+.btn-nav{
+    color: #fff;
+}
+
+.btn-nav:hover{
+    font-weight: bold;
 }
 
 

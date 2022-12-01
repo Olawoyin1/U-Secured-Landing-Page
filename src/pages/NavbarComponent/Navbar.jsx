@@ -25,7 +25,7 @@ const Navbar = () => {
               <li><a onClick={()=> setOpenNav(true)} href="">Features</a></li>
               <li><a onClick={()=> setOpenNav(true)} href="">News</a></li>
               <li><a onClick={()=> setOpenNav(true)} href="">Contact</a></li>
-              <li><Link to={"join-waitlist"} onClick={()=> setOpenNav(true)} className="btn last">Join the waitlist</Link></li>
+              <li className='last'><Link className='btn btn-nav' to={"join-waitlist"} onClick={()=> setOpenNav(true)}>Join the waitlist</Link></li>
               <HiOutlineX 
                 className="close-btn" 
                 onClick={()=> setOpenNav(true)}

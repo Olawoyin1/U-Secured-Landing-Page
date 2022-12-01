@@ -43,6 +43,10 @@ p{
     font-size: 15px;
 }
 
+a{
+    color: #444;
+}
+
 option{
     padding: 10px;
 }
