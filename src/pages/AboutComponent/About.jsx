@@ -18,17 +18,7 @@ const About = () => {
 
     
 
-    const About = AboutDatas.map(data =>{
-      return(
-        <div key={data.id} className={data.class}>
-          <button className='icon-btn'>
-            <i className={data.icon}></i>
-            </button>
-          <h3>{data.title}</h3>
-          <p>{data.content}</p>
-        </div>
-      )
-    })
+
 
 
 
@@ -51,7 +41,19 @@ const About = () => {
 
         <div className="about-scroll">
 
-          {About}
+          {
+            AboutDatas.map(data =>{
+              return(
+                <div key={data.id} className={data.class}>
+                  <button className='icon-btn'>
+                    <i className={data.icon}></i>
+                    </button>
+                  <h3>{data.title}</h3>
+                  <p>{data.content}</p>
+                </div>
+              )
+            })
+          }
 
         </div>
 

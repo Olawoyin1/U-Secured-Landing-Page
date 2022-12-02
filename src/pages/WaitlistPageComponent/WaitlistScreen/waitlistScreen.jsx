@@ -27,15 +27,6 @@ const WaitlistScreen = () => {
         const days = Math.floor(distance / (24*60*60*1000))
         const newdays = days < 10 ? "0" + days : days
 
-        // if (daysLeft > 365) {
-        //   yearsLeft = Math.floor(daysLeft / 365);
-        //   daysLeft = daysLeft % 365;
-        // }
-
-        // if (newdays > 31) {
-        //   daysLeft = Math.floor(days / 30);
-        //   daysLeft = daysLeft % 365;
-        // }
         
         const hours = Math.floor(distance % (24*60*60*1000)/(60*60*1000))
         const newhours = hours < 10 ? "0" + hours : hours

@@ -9,7 +9,7 @@ const Offer = () => {
 
 
   return (
-    <div class="what-we-offer">
+    <div class="what-we-offer" id='offer'>
         <div class="container what-we-offer-container">
             <div class="offer-header">
                 <div class="header-content">
