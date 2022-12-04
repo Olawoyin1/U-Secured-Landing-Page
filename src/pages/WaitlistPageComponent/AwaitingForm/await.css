@@ -155,6 +155,9 @@ select::-ms-expand {
     width: 8rem;
 }
 
+.input-flex-input{
+    width: 100%;
+}
 
 
 

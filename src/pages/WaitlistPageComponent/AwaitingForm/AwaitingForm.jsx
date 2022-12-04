@@ -3,65 +3,50 @@ import "./await.css"
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { Toaster, toast } from 'react-hot-toast';
 import { Grammerly, Sms } from 'iconsax-react'
-
+import { useFormik } from 'formik';
+import  * as Yup from "yup"
 
 const AwaitingForm = () => {
 
-    const [formData,setFormData] = React.useState(
-        {
-            firstname : "",
-            email : "",
-            state : "",
-            countryCode : "",
-            phone : ""
-        }
-    )
-
-
-    
-
-    function handleChange(e){
-        
-     
-
-
-        const {name, value, type, checked} = e.target
-        setFormData(prevState=>{
-            return {
-                ...prevState,
-                [name] : type ==  "checkbox" ? checked : value 
-            }
-        })
-        
-        
-        
-
+    const initialValues = {
+        firstname : "",
+        lastname : "",
+        email : "",
+        state : "",
+        countryCode : "+234",
+        phone : ""
     }
-    
 
-
-    const handleFormData = (e) => {
-        e.preventDefault();
-        console.log(formData);
-        const canSave = Boolean(formData.firstname) && Boolean(formData.email) && Boolean(formData.phone) && Boolean(formData.state) 
-        
-        
-        if(canSave){
-            toast.success("You've successfully joined the Waiting list")
-
-            setFormData(prevState => ({
-                firstname : "",
-                email : "",
-                state : "",
-                countryCode : "",
-                phone : ""
-            }))
-
-        }else{
-
-            toast.error("Please fill all fields")
-        }
+    const onSubmit = values =>{
+        console.log(values);
     }
+
+
+    const validationSchema = Yup.object({
+        firstname: Yup.string().required('Firstname is required'),
+        lastname : Yup.string().required("Lastname is required"),
+        email : Yup.string().email("Invalid email format").required("Email is required"),
+        state : Yup.string().required("State is required"),
+        // phone : Yup.string().required("Phone is required")
+        phone : Yup.number("Phone must be a number")
+            .required("Phone is required")
+            .min(10)
+            .positive("Negative values not allowed")
+            .integer()
+            .min(5, "Must be more than 5")
+    })
+
+   
+    
+    
+    const formData = useFormik({
+        initialValues,
+        onSubmit,
+        // validate
+        validationSchema
+    })
+    
+    console.log(formData.errors);
 
     const States =[
         "Abia",
@@ -121,38 +106,70 @@ const AwaitingForm = () => {
                 </div>
 
                 <div class="col-content">
-                <form action="" onSubmit={handleFormData}>
+
+
+                {/* FORM DAT STARTS HERE */}
+
+                <form action="" onSubmit={formData.handleSubmit}>
                         <h3>Enter your details below</h3>
 
                         <div className="input-field">
                             <input 
                                 type="text" 
                                 placeholder='First name'
-                                onChange={handleChange}    
+                                onChange={formData.handleChange}    
                                 name="firstname"
-                                value={formData.firstname}
+                                value={formData.values.firstname}
+                                onBlur={formData.handleBlur}
                             />
                             <Grammerly 
                                 size="20" 
                                 className='icon'
                                 color="#444"
                             />
+                            {
+                                formData.touched.firstname &&  formData.errors.firstname ? <small className='error'>{formData.errors.firstname}  <i class="uil uil-exclamation-circle"></i></small> : null
+                            }
+                            
+                        </div>
+                        
+                        <div className="input-field">
+                            <input 
+                                type="text" 
+                                placeholder='Last name'
+                                onChange={formData.handleChange}    
+                                name="lastname"
+                                value={formData.values.lastname}
+                                onBlur={formData.handleBlur}
+                            />
+                            <Grammerly 
+                                size="20" 
+                                className='icon'
+                                color="#444"
+                            />
+                            {
+                                formData.touched.lastname &&  formData.errors.lastname ? <small className='error'>{formData.errors.lastname}  <i class="uil uil-exclamation-circle"></i></small> : null
+                            }
+                            
                         </div>
 
                         <div className="input-field">
                             <input
                                 type="text" 
                                 placeholder='E-mail address' 
-                                onChange={handleChange}    
+                                onChange={formData.handleChange}      
                                 name="email"
-                                value={formData.email}
+                                value={formData.values.email}
+                                onBlur={formData.handleBlur}
                             />
                             <Sms 
                                 size="20" 
                                 className='icon'
                                 color="#444"
                             />
-                            
+                            {
+                                formData.touched.email &&  formData.errors.email ? <small className='error'>{formData.errors.email}  <i class="uil uil-exclamation-circle"></i></small> : null
+                            }
                         
                         </div>
 
@@ -161,7 +178,8 @@ const AwaitingForm = () => {
                                 <select 
                                     name="state" 
                                     id="state"
-                                    onChange={handleChange}
+                                    onChange={formData.handleChange}   
+                                    onBlur={formData.handleBlur}
                                 >
                                     <option value="">State of residence</option>
                                     {
@@ -169,8 +187,10 @@ const AwaitingForm = () => {
                                     }
                                     
                                 </select>
-                                
                             </div>
+                            {
+                                formData.touched.state &&  formData.errors.state ? <small className='error'>{formData.errors.state}  <i class="uil uil-exclamation-circle"></i></small> : null
+                            }
 
                         </div>
 
@@ -180,7 +200,8 @@ const AwaitingForm = () => {
                                 <select 
                                     name="countryCode" 
                                     id="countryCode"
-                                    onChange={handleChange}
+                                    onChange={formData.handleChange}   
+                                    onBlur={formData.handleBlur}
                                 >
                                     {
                                         phoneOpt.map(data=> <option value={data}>{data}</option>)
@@ -190,15 +211,20 @@ const AwaitingForm = () => {
                                 
                             </div>
                         
+                            <div className='input-flex-input'>
+                                <input 
+                                    type="text" 
+                                    placeholder='000 000 0000' 
+                                    onChange={formData.handleChange}   
+                                    name="phone"
+                                    value={formData.values.phone}
+                                    onBlur={formData.handleBlur}
+                                />
+                                {
+                                    formData.touched.phone &&  formData.errors.phone ? <small className='error'>{formData.errors.phone}  <i class="uil uil-exclamation-circle"></i></small> : null
+                                }
                             
-                            <input 
-                                type="text" 
-                                placeholder='000 000 0000' 
-                                onChange={handleChange}    
-                                name="phone"
-                                value={formData.phone}
-                            />
-                        
+                            </div>
                         </div>
 
                         <div className="form-buttons">

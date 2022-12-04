@@ -43,6 +43,11 @@ option{
     padding: 10px;
 }
 
+.error{
+    color: red;
+    font-size: small;
+    margin-left: 5px;
+}
 
 .btn{
     padding: 10px 16px;
