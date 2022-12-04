@@ -17,18 +17,6 @@ html{
     scroll-behavior: smooth;
 }
 
-@font-face {
-    font-family: poppins;
-    src: url('./fonts/Poppins-Regular.ttf');
-}
-
-
-
-@font-face {
-    font-family: poppins;
-    src: url('./fonts/Poppins-Bold.ttf');
-    font-weight: 500;
-}
 
 .container{
     width: 85%;
@@ -172,5 +160,9 @@ option{
 
     .large-screen{
         display: none;
+    }
+
+    .btn{
+        padding: 16px 20px;
     }
 }

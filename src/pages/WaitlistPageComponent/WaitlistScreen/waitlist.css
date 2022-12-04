@@ -37,7 +37,7 @@
 }
 
 .countdown-el small{
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .big-colon{
@@ -58,6 +58,15 @@
         font-size: 40px;
     }
 }
+
+@media (max-width:400px) {
+    .waitlist-container .bold{
+        font-size: 40px !important;
+    }
+    
+}
+
+
 
 
 
@@ -81,7 +90,7 @@
 
 
 @media (max-width:294px){
-    .waitlist-container .bold{
+    /* .waitlist-container .bold{
         font-size:30px;
-    }
+    } */
 }
