@@ -15,8 +15,8 @@
 }
 
 .waitlist-container .bold{
-    font-size: 59px;
-    max-width: 450px;
+    font-size: 65px;
+    max-width: 400px;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -37,7 +37,7 @@
 }
 
 .countdown-el small{
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .big-colon{
@@ -47,24 +47,6 @@
 
 
 
-@media (max-width:500px) {
-    .countdown{
-        gap: 3px;
-    }
-    .countdown-el h1{
-        font-size: 30px;
-    }
-    .waitlist-container .bold{
-        font-size: 40px;
-    }
-}
-
-@media (max-width:400px) {
-    .waitlist-container .bold{
-        font-size: 40px !important;
-    }
-    
-}
 
 
 
@@ -93,4 +75,31 @@
     /* .waitlist-container .bold{
         font-size:30px;
     } */
+}
+
+@media (max-width:500px) {
+    .countdown{
+        gap: 3px;
+    }
+    .countdown-el h1{
+        font-size: 35px;
+    }
+    .waitlist-container .bold{
+        font-size: 50px;
+    }
+}
+
+@media (max-width:400px) {
+    .waitlist-container .bold{
+        font-size: 40px !important;
+    }
+    
+}
+
+
+
+@media (max-width:294px){
+    .waitlist-container .bold{
+        font-size: 30px !important;
+    }
 }
