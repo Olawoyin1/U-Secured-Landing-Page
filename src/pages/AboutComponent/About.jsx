@@ -30,12 +30,7 @@ const About = () => {
           <p>Unique features</p>
           <h1>All about <br/>  U-secured</h1>
           <div className="buttons">
-            <button>
-              <HiChevronLeft />
-            </button>
-            <button>
-              <HiChevronRight />
-            </button>
+            <p>swipe <i class="uil uil-angle-double-right"></i> </p>
           </div>
         </div>
 
