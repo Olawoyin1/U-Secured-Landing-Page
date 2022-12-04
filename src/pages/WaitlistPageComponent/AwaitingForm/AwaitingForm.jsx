@@ -63,14 +63,45 @@ const AwaitingForm = () => {
         }
     }
 
-    const States = [
-        "Osun",
-        "Abuja",
+    const States =[
+        "Abia",
+        "Adamawa",
+        "Akwa Ibom",
+        "Anambra",
+        "Bauchi",
+        "Bayelsa",
+        "Benue",
+        "Borno",
+        "Cross River",
+        "Delta",
+        "Ebonyi",
+        "Edo",
+        "Ekiti",
+        "Enugu",
+        "FCT - Abuja",
+        "Gombe",
+        "Imo",
+        "Jigawa",
+        "Kaduna",
         "Kano",
+        "Katsina",
+        "Kebbi",
+        "Kogi",
+        "Kwara",
+        "Lagos",
+        "Nasarawa",
+        "Niger",
+        "Ogun",
+        "Ondo",
         "Osun",
-        "Osun",
-        "Lagos"
-    ]
+        "Oyo",
+        "Plateau",
+        "Rivers",
+        "Sokoto",
+        "Taraba",
+        "Yobe",
+        "Zamfara"
+      ]
   
     const phoneOpt = [
         "+234",
