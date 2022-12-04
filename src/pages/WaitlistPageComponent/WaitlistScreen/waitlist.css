@@ -15,7 +15,7 @@
 }
 
 .waitlist-container .bold{
-    font-size: 65px;
+    font-size: 50px;
     max-width: 400px;
     font-weight: 700;
     line-height: 1.2;
@@ -56,21 +56,19 @@
 
 
 
-@media (max-width:850px) {
-    .col-2.waitlist-col{
-        grid-gap: 30px;
-    }
-}
-
-
 @media (max-width:920px) {
     .waitlist-container .bold{
-        font-size: 47px;
+        font-size: 40px;
     }
     
 }
 
 
+@media (max-width:850px) {
+    .col-2.waitlist-col{
+        grid-gap: 30px;
+    }
+}
 
 
 @media (max-width:500px) {
@@ -92,11 +90,11 @@
     }
 
     .countdown-el small{
-        font-size: 10px;
+        font-size: 11px;
     }
     
     .big-colon{
-        font-size: 30px;
+        font-size: 25px;
     }
     
     

@@ -67,7 +67,7 @@ const WaitlistScreen = () => {
 
         <div class="col-2 reverse-col waitlist-col">
             <div class="col-content">
-              <h1 className='bold'>Get ready for the <span className='color'>BIG</span> launch!</h1>
+              <h1 className='bold'>Get ready for <br /> the <span className='color'>BIG</span> launch!</h1>
               <p>We’ll let you know when eveything’s ready</p>
             
 
