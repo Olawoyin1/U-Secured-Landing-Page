@@ -10,16 +10,18 @@
 
 .offer-header h1{
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .header-content{
-    max-width: 600px;
+    max-width: 500px;
 }
 
-
+.col-headings{
+    font-weight: 700;
+}
 
 
 

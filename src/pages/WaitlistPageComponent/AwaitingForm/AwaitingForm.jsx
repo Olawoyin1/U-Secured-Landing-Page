@@ -40,7 +40,7 @@ const AwaitingForm = () => {
     
 
 
-    const submitData = (e) => {
+    const handleFormData = (e) => {
         e.preventDefault();
         console.log(formData);
         const canSave = Boolean(formData.firstname) && Boolean(formData.email) && Boolean(formData.phone) && Boolean(formData.state) 
@@ -48,6 +48,14 @@ const AwaitingForm = () => {
         
         if(canSave){
             toast.success("You've successfully joined the Waiting list")
+
+            setFormData(prevState => ({
+                firstname : "",
+                email : "",
+                state : "",
+                countryCode : "",
+                phone : ""
+            }))
 
         }else{
 
@@ -66,16 +74,6 @@ const AwaitingForm = () => {
   
     const phoneOpt = [
         "+234",
-        "+233",
-        "+334",
-        "+24",
-        "+134",
-        "+44",
-        "+34",
-        "+204",
-        "+104",
-        "+34",
-        "+19",
     ]
 
 
@@ -92,7 +90,7 @@ const AwaitingForm = () => {
                 </div>
 
                 <div class="col-content">
-                <form action="">
+                <form action="" onSubmit={handleFormData}>
                         <h3>Enter your details below</h3>
 
                         <div className="input-field">
@@ -173,10 +171,10 @@ const AwaitingForm = () => {
                         </div>
 
                         <div className="form-buttons">
-                            <button className='btn btn4'>Add referral code</button>
+                        
                             <button 
                                 className='btn'
-                                onClick={submitData}
+                                type='submit'
                             >Join The Waitlist</button>
                         </div>
 

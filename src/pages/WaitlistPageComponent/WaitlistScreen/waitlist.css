@@ -15,9 +15,9 @@
 }
 
 .waitlist-container .bold{
-    font-size: 50px;
-    max-width: 400px;
-    font-weight: 500;
+    font-size: 59px;
+    max-width: 450px;
+    font-weight: 700;
     line-height: 1.2;
 }
 
@@ -26,8 +26,6 @@
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
-    /* display: none;/ */
-    /* max-width: 100%; */
 }
 
 

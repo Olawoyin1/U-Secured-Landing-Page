@@ -89,6 +89,10 @@
     margin-top: 20px;
 }
 
+.form-buttons .btn{
+    padding: 16px 30px ;
+}
+
 .btn4{
     background-color: #fff;
     color: black;
