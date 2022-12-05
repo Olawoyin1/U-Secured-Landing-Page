@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<SharedLayout />}>
               <Route index element={<Hero />}/>
-              <Route path='join-waitlist' element={<Waitlist />}/>
+              <Route path='waitlist' element={<Waitlist />}/>
               <Route path='*' element={<ErrorPage />}/>
           </Route>
         </Routes>

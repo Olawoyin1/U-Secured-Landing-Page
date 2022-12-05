@@ -27,7 +27,7 @@ const AwaitingForm = () => {
         firstname: Yup.string().required('Firstname is required'),
         lastname : Yup.string().required("Lastname is required"),
         email : Yup.string().email("Invalid email format").required("Email is required"),
-        state : Yup.string().required("State is required"),
+        state : Yup.string().required("Please select your state"),
         // phone : Yup.string().required("Phone is required")
         phone : Yup.number("Phone must be a number")
             .required("Phone is required")
@@ -99,14 +99,14 @@ const AwaitingForm = () => {
     <div className='awaiting-list'>
         <div className="container await-container">
        
-            <div class="col-2">
+            <div className="col-2">
 
-                <div class="await-image">
+                <div className="await-image">
                     <img className='large-screen' src="images/awaiting-large.svg" alt="" />
                     <img className='mobile-screen' src="images/awaiting-mobile.svg" alt="" />
                 </div>
 
-                <div class="col-content">
+                <div className="col-content">
 
 
                 {/* FORM DAT STARTS HERE */}
@@ -182,7 +182,7 @@ const AwaitingForm = () => {
                                 >
                                     <option value="">State of residence</option>
                                     {
-                                        States.map(state => <option value={state}>{state}</option>)
+                                        States.map((state, index) => <option key={index} value={state}>{state}</option>)
                                     }
                                     
                                 </select>
@@ -203,7 +203,7 @@ const AwaitingForm = () => {
                                     onBlur={formData.handleBlur}
                                 >
                                     {
-                                        phoneOpt.map(data=> <option value={data}>{data}</option>)
+                                        phoneOpt.map((data, index)=> <option key={index} value={data}>{data}</option>)
                                     }
                                     
                                 </select>

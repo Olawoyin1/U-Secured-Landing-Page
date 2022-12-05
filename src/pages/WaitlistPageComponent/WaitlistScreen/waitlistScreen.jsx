@@ -65,8 +65,8 @@ const WaitlistScreen = () => {
       <div className="container waitlist-container">
 
 
-        <div class="col-2 reverse-col waitlist-col">
-            <div class="col-content">
+        <div className="col-2 reverse-col waitlist-col">
+            <div className="col-content">
               <h1 className='bold'>Get ready for <br /> the <span className='color'>BIG</span> launch!</h1>
               <p>We’ll let you know when eveything’s ready</p>
             
@@ -108,7 +108,7 @@ const WaitlistScreen = () => {
             </div>
 
             </div>
-            <div class="waitlist-image">
+            <div className="waitlist-image">
                 <img className='large-screen' src="images/waitlist-large.svg" alt="" />
                 <img className="mobile-screen" src="images/waitlist-mobile.svg" alt="" />
             </div>

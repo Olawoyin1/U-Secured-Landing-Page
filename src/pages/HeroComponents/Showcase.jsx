@@ -15,7 +15,7 @@ const Showcase = () => {
             <h1 className='bold'>Safety made <br /> just for <span className="color">you</span></h1>
             <p>The Safety tech built to keep you safe and connected with other users around the globe</p>
             <div className='waitlist-arrow'>
-              <Link to={"join-waitlist"} className="btn last">Join the waitlist</Link>
+              <Link to={"waitlist"} className="btn last">Join the waitlist</Link>
               
               <a href="#footer" className=' arrow-mobile'>
                 <ArrowDown />

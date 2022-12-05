@@ -63,10 +63,10 @@ const Mobile = () => {
             <img src="images/mobile.svg"  className='one' alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="images/mobile1.svg" className='three' alt="" />
+            <img src="images/mobile1.svg" className='two' alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="images/mobile2.svg" className='two' alt="" />
+            <img src="images/mobile2.svg" className='three' alt="" />
           </SwiperSlide>
         </Swiper>
 

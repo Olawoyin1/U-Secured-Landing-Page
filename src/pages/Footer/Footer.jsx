@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="footer-waitlist-container">
                 <h3>Get ready for the big launch.</h3>
                 <button className="btn2">
-                    <Link to={"join-waitlist"} className="btn2 last">Join the waitlist</Link>
+                    <Link to={"waitlist"} className="btn2 last">Join the waitlist</Link>
                 </button>
             </div>
             <div className="footer-grid">
