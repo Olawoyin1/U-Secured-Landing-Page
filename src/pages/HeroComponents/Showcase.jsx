@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./showcase.css"
 import { HiArrowLongDown } from "react-icons/hi2";
+import { ArrowDown } from 'iconsax-react';
 
 
 
@@ -17,7 +18,7 @@ const Showcase = () => {
               <Link to={"join-waitlist"} className="btn last">Join the waitlist</Link>
               
               <a href="#footer" className=' arrow-mobile'>
-                <HiArrowLongDown />
+                <ArrowDown />
               </a>
 
             </div>
@@ -33,7 +34,7 @@ const Showcase = () => {
          
 
           <a href="#footer" className='arrow arrow-pc'>
-            <HiArrowLongDown />
+            <ArrowDown />
           </a>
       </div>
 

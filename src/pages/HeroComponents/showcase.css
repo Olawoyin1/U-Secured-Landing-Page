@@ -31,9 +31,9 @@
 }
 
 .hero-content h1{
-    font-size: 65px;
+    font-size: 60px;
     max-width: 400px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
 }
 
@@ -145,8 +145,8 @@
 
 
 
-@media (max-width:294px){
+@media (max-width:358px){
     .hero-content h1{
-        font-size:30px;
+        font-size:35px;
     }
 }

@@ -40,8 +40,12 @@
     padding: 15px;
     background-color: #F2F2FD;
     border-radius: 8px;
-    
+    /* outline: 1.3px solid #4087EA; */
 }
+
+
+
+
 
 .input-field select{
     width: 100%;
@@ -157,8 +161,14 @@ select::-ms-expand {
 
 .input-flex-input{
     width: 100%;
+    position: relative;
 }
 
+.input-flex-input .phone-icon{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
 
 
 
@@ -226,4 +236,11 @@ select::-ms-expand {
     .await-image{
         height: fit-content;
     }
+
+    
+.input-flex{
+    display: flex;
+    gap: 10px;
+    /* background-color: red; */
+}
 }

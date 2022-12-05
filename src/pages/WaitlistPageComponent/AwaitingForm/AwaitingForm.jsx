@@ -2,9 +2,10 @@ import React from 'react'
 import "./await.css"
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { Toaster, toast } from 'react-hot-toast';
-import { Grammerly, Sms } from 'iconsax-react'
+import { Grammerly, InfoCircle, Sms } from 'iconsax-react'
 import { useFormik } from 'formik';
 import  * as Yup from "yup"
+import { HiExclamationCircle } from 'react-icons/hi';
 
 const AwaitingForm = () => {
 
@@ -46,7 +47,7 @@ const AwaitingForm = () => {
         validationSchema
     })
     
-    console.log(formData.errors);
+    // console.log(formData.errors);
 
     const States =[
         "Abia",
@@ -122,13 +123,12 @@ const AwaitingForm = () => {
                                 value={formData.values.firstname}
                                 onBlur={formData.handleBlur}
                             />
-                            <Grammerly 
-                                size="20" 
-                                className='icon'
-                                color="#444"
-                            />
                             {
-                                formData.touched.firstname &&  formData.errors.firstname ? <small className='error'>{formData.errors.firstname}  <i class="uil uil-exclamation-circle"></i></small> : null
+                                formData.errors.firstname ? <InfoCircle size="20" className='icon' color="red" /> : <Grammerly size="20" className='icon' color="#444" />
+                            }
+                            
+                            {
+                                formData.touched.firstname &&  formData.errors.firstname ? <small className='error'>{formData.errors.firstname}</small> : null
                             }
                             
                         </div>
@@ -142,13 +142,12 @@ const AwaitingForm = () => {
                                 value={formData.values.lastname}
                                 onBlur={formData.handleBlur}
                             />
-                            <Grammerly 
-                                size="20" 
-                                className='icon'
-                                color="#444"
-                            />
+                           {
+                                formData.errors.lastname ? <InfoCircle size="20" className='icon' color="red" /> : <Grammerly size="20" className='icon' color="#444" />
+                            }
+                            
                             {
-                                formData.touched.lastname &&  formData.errors.lastname ? <small className='error'>{formData.errors.lastname}  <i class="uil uil-exclamation-circle"></i></small> : null
+                                formData.touched.lastname &&  formData.errors.lastname ? <small className='error'>{formData.errors.lastname} </small> : null
                             }
                             
                         </div>
@@ -162,13 +161,13 @@ const AwaitingForm = () => {
                                 value={formData.values.email}
                                 onBlur={formData.handleBlur}
                             />
-                            <Sms 
-                                size="20" 
-                                className='icon'
-                                color="#444"
-                            />
                             {
-                                formData.touched.email &&  formData.errors.email ? <small className='error'>{formData.errors.email}  <i class="uil uil-exclamation-circle"></i></small> : null
+                                formData.errors.firstname ? <InfoCircle size="20" className='icon' color="red" /> : <Sms size="20" className='icon' color="#444"  />
+                            }
+                            
+                            
+                            {
+                                formData.touched.email &&  formData.errors.email ? <small className='error'>{formData.errors.email}  </small> : null
                             }
                         
                         </div>
@@ -189,7 +188,7 @@ const AwaitingForm = () => {
                                 </select>
                             </div>
                             {
-                                formData.touched.state &&  formData.errors.state ? <small className='error'>{formData.errors.state}  <i class="uil uil-exclamation-circle"></i></small> : null
+                                formData.touched.state &&  formData.errors.state ? <small className='error'>{formData.errors.state}  </small> : null
                             }
 
                         </div>
@@ -221,7 +220,11 @@ const AwaitingForm = () => {
                                     onBlur={formData.handleBlur}
                                 />
                                 {
-                                    formData.touched.phone &&  formData.errors.phone ? <small className='error'>{formData.errors.phone}  <i class="uil uil-exclamation-circle"></i></small> : null
+                                formData.errors.firstname ? <InfoCircle size="20" className='phone-icon' color="red" /> : null
+                                }
+                                
+                                {
+                                    formData.touched.phone &&  formData.errors.phone ? <small className='error'>{formData.errors.phone} </small> : null
                                 }
                             
                             </div>
