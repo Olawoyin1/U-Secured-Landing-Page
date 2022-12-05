@@ -124,7 +124,7 @@ const AwaitingForm = () => {
                                 onBlur={formData.handleBlur}
                             />
                             {
-                                formData.errors.firstname ? <InfoCircle size="20" className='icon' color="red" /> : <Grammerly size="20" className='icon' color="#444" />
+                                formData.touched.firstname &&  formData.errors.firstname? <InfoCircle size="20" className='icon' color="red" /> : <Grammerly size="20" className='icon' color="#444" />
                             }
                             
                             {
@@ -143,7 +143,7 @@ const AwaitingForm = () => {
                                 onBlur={formData.handleBlur}
                             />
                            {
-                                formData.errors.lastname ? <InfoCircle size="20" className='icon' color="red" /> : <Grammerly size="20" className='icon' color="#444" />
+                                formData.touched.lastname &&  formData.errors.lastname  ? <InfoCircle size="20" className='icon' color="red" /> : <Grammerly size="20" className='icon' color="#444" />
                             }
                             
                             {
@@ -162,7 +162,7 @@ const AwaitingForm = () => {
                                 onBlur={formData.handleBlur}
                             />
                             {
-                                formData.errors.firstname ? <InfoCircle size="20" className='icon' color="red" /> : <Sms size="20" className='icon' color="#444"  />
+                                formData.touched.email &&  formData.errors.email  ? <InfoCircle size="20" className='icon' color="red" /> : <Sms size="20" className='icon' color="#444"  />
                             }
                             
                             
@@ -220,7 +220,7 @@ const AwaitingForm = () => {
                                     onBlur={formData.handleBlur}
                                 />
                                 {
-                                formData.errors.firstname ? <InfoCircle size="20" className='phone-icon' color="red" /> : null
+                                    formData.touched.phone &&  formData.errors.phone ? <InfoCircle size="20" className='phone-icon' color="red" /> : null
                                 }
                                 
                                 {
