@@ -3,13 +3,39 @@ import { NavLink , Link} from 'react-router-dom'
 import "./navbar.css"
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { HiOutlineX } from "react-icons/hi";
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
 
   const [openNav, setOpenNav] = React.useState(true)
 
+
+  const navVariant = {
+    initial : {
+      y : -10,
+      opacity : 0 
+    },
+    animate : {
+      y : [0 , 30, 0],
+      opacity : 1,
+      transition : {
+        type : "spring",
+        duration: 1.5,
+        
+        stifness : 150,
+        bounce : 100
+      }
+    }
+  }
+
+
   return (
-    <div className="navbar">
+    <motion.div 
+      className="navbar"
+      variants={navVariant}
+      initial="initial"
+      animate="animate"
+    >
         <div className="container navbar-container">
           <Link className='desktop'  to={"/"}>
             <img src="images/large-logo.svg" alt="" />
@@ -39,7 +65,7 @@ const Navbar = () => {
 
       
         </div>
-      </div>
+      </motion.div>
   )
 }
 
