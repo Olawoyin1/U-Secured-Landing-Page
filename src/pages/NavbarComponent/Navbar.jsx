@@ -43,11 +43,14 @@ const Navbar = () => {
   return (
     <motion.div 
       className={scroll ? "navbar scrolled" : "navbar" }
-      variants ={navVariant}
-      initial="initial"
-      animate="animate"
+      
     >
-        <div className="container navbar-container">
+        <motion.div 
+          className="container navbar-container"
+          variants ={navVariant}
+          initial="initial"
+          animate="animate"
+        >
           <Link className='desktop'  to={"/"}>
             <img src="images/large-logo.svg" alt="" />
           </Link>
@@ -75,7 +78,7 @@ const Navbar = () => {
           />
 
       
-        </div>
+        </motion.div>
       </motion.div>
   )
 }
