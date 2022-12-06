@@ -8,6 +8,17 @@ import { motion } from 'framer-motion';
 const Navbar = () => {
 
   const [openNav, setOpenNav] = React.useState(true)
+  
+  const [scroll, SetScroll] = React.useState(false)
+
+  window.addEventListener("scroll", ()=>{
+    if(window.scrollY > 100){
+      SetScroll(true)
+    }else{
+      SetScroll(false)
+    }
+    
+  })
 
 
   const navVariant = {
@@ -31,8 +42,8 @@ const Navbar = () => {
 
   return (
     <motion.div 
-      className="navbar"
-      variants={navVariant}
+      className={scroll ? "navbar scrolled" : "navbar" }
+      variants ={navVariant}
       initial="initial"
       animate="animate"
     >
