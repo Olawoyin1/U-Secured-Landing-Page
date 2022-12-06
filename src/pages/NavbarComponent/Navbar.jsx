@@ -12,18 +12,18 @@ const Navbar = () => {
 
   const navVariant = {
     initial : {
-      y : -10,
+      y : -100,
       opacity : 0 
     },
     animate : {
-      y : [0 , 30, 0],
+      y : 0,
       opacity : 1,
       transition : {
-        type : "spring",
-        duration: 1.5,
-        
-        stifness : 150,
-        bounce : 100
+        type : "tween",
+        duration: 1.35,
+        bounce: 0,
+        ease: "linear",
+        stifness : 0,
       }
     }
   }

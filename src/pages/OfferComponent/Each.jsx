@@ -5,9 +5,9 @@ const Each = ({classlist, large_screen, small_screen, title,content}) => {
 
     const [readMore, setReadMore] = React.useState(false)
 
-    const offerVariant = {
+    const slideUp = {
         initial : {
-          y : -10,
+          y : -100,
           opacity : 0 
         },
         animate : {
@@ -15,10 +15,24 @@ const Each = ({classlist, large_screen, small_screen, title,content}) => {
           opacity : 1,
           transition : {
             type : "spring",
-            duration: 1.5,
             
             stifness : 150,
             bounce : 100
+          }
+        }
+      }
+
+      const offerVariant = {
+        initial : {
+          x : "0",
+        },
+        animate : {
+          x : 0,
+          transition : {
+            duration: 0.5, 
+            type: "spring",
+            when : "beforeChildren" ,
+            staggerChildren : 1
           }
         }
       }
@@ -36,12 +50,10 @@ const Each = ({classlist, large_screen, small_screen, title,content}) => {
                 </div>
                 <motion.div 
                     className="col-content"
-                    variants={offerVariant}
-                    initial="initial"
-                    whileInView="animate"
+                    
                 >
                     <h2 className="col-headings">{title}</h2>
-                    <p> 
+                    <motion.p ani> 
                            {
                             readMore ? content : `${content.substring(0,200)}...`
                            }
@@ -51,7 +63,7 @@ const Each = ({classlist, large_screen, small_screen, title,content}) => {
                                     readMore ? "Show less" : "Read more"
                                 }
                             </button>
-                        </p>
+                        </motion.p>
                 </motion.div>
             </motion.div>
 
