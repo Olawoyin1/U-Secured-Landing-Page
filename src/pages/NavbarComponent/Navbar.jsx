@@ -63,29 +63,30 @@ const Navbar = () => {
           <ul className={openNav ? "links" : "links show"}>
 
 
-            <div className="nav-mobile-top">
-              <Link onClick={()=> setOpenNav(true)} className='mobile-logo' to={"/"}>
-                <img src="images/mobile-logo.svg"  alt="" />
-              </Link>
-
-              <HiOutlineX 
-                className="close-btn" 
-                onClick={()=> setOpenNav(true)}
-              />
-
-            </div>
-
               <li className="first"><a onClick={()=> setOpenNav(true)} href="#about">About Us</a></li>
               <li><a onClick={()=> setOpenNav(true)} href="#offer">Features</a></li>
               <li><a onClick={()=> setOpenNav(true)} href="">News</a></li>
               <li><a onClick={()=> setOpenNav(true)} href="">Contact</a></li>
               <li className='last'><Link className='btn btn-nav' to={"waitlist"} onClick={()=> setOpenNav(true)}>Join the waitlist</Link></li>
               
+
           </ul>
-              <HiBars3BottomRight 
-              className='menu' 
-              onClick={()=> setOpenNav(false)}
-               />
+          
+
+              {
+                openNav ?  
+                <HiBars3BottomRight 
+                className='menu' 
+                onClick={()=> setOpenNav(false)}
+            /> :
+            <HiOutlineX 
+                className="menu close-btn" 
+                onClick={()=> setOpenNav(true)}
+              />
+
+              }
+              
+         
 
           
 

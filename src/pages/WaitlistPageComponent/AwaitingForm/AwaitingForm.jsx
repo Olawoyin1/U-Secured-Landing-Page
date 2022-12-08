@@ -202,6 +202,7 @@ const AwaitingForm = () => {
                                 <select 
                                     name="state" 
                                     id="state"
+                                    value={formData.values.state}
                                     onChange={formData.handleChange}   
                                     onBlur={formData.handleBlur}
                                 >
