@@ -25,7 +25,7 @@ const AwaitingForm = () => {
         if(validationSchema){
             
             console.log(values);
-            resetForm({ values: " "})
+            resetForm({ values: ""})
 
             toast.success("You've successfully joined the list")
 
@@ -202,7 +202,6 @@ const AwaitingForm = () => {
                                 <select 
                                     name="state" 
                                     id="state"
-                                    value={formData.values.state}
                                     onChange={formData.handleChange}   
                                     onBlur={formData.handleBlur}
                                 >
