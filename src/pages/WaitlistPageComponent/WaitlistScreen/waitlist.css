@@ -12,13 +12,7 @@
 
 .col-2.waitlist-col{
     grid-gap: 0px;
-}
-
-.waitlist-container .bold{
-    font-size: 50px;
-    max-width: 400px;
-    font-weight: 700;
-    line-height: 1.2;
+    margin-bottom: 0;
 }
 
 
@@ -34,6 +28,10 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+
+.countdown-el h1{
+    font-size: 48px;
 }
 
 .countdown-el small{
@@ -54,14 +52,14 @@
 
 
 
-
-
-@media (max-width:920px) {
-    .waitlist-container .bold{
-        font-size: 40px;
+@media (max-width:1015px){
+    .countdown-el h1{
+        font-size: 39px;
     }
     
 }
+
+
 
 
 @media (max-width:850px) {
@@ -78,16 +76,9 @@
     .countdown-el h1{
         font-size: 35px;
     }
-    .waitlist-container .bold{
-        font-size: 45px !important;
-    }
 }
 
 @media (max-width:400px) {
-    .waitlist-container .bold{
-        font-size: 42px !important;
-        /* border: 1px solid red; */
-    }
 
     .countdown-el small{
         font-size: 11px;
@@ -102,9 +93,3 @@
 }
 
 
-
-@media (max-width:294px){
-    .waitlist-container .bold{
-        font-size: 30px !important;
-    }
-}

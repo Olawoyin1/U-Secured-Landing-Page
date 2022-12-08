@@ -11,8 +11,8 @@ const Showcase = () => {
   return (
     <div className="hero">
       <div className="container  reverse-grid">
-        <div className="hero-content">
-            <h1 className='bold'>Safety made <br /> just for <span className="color">you</span></h1>
+        <div className="reverse-content">
+            <h1>Safety made <br /> just for <span className="color">you</span></h1>
             <p>The Safety tech built to keep you safe and connected with other users around the globe</p>
             <div className='waitlist-arrow'>
               <Link to={"waitlist"} className="btn last">Join the waitlist</Link>
@@ -24,7 +24,7 @@ const Showcase = () => {
             </div>
         </div>
 
-        <div className="showcase-image">
+        <div className="reverse-image">
 
           <img className='large-screen' src="images/hero-large.svg" alt="" />
           <img className='mobile-screen' src="images/hero-mobile.svg" alt="" />

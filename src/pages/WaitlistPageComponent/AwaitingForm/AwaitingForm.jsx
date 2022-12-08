@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./await.css"
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { Toaster, toast } from 'react-hot-toast';
@@ -9,32 +9,57 @@ import { HiExclamationCircle } from 'react-icons/hi';
 
 const AwaitingForm = () => {
 
+    const [status, setStatus] = useState("");
+    const [message, setMessage] = useState("");
+
     const initialValues = {
-        firstname : "",
-        lastname : "",
+        first_name : "",
+        last_name : "",
         email : "",
         state : "",
-        countryCode : "+234",
+        // countryCode : "+234",
         phone : ""
     }
 
-    const onSubmit = values =>{
-        console.log(values);
+    const onSubmit =async (values, {resetForm}) =>{
+        if(validationSchema){
+            
+            console.log(values);
+            resetForm({ values: " "})
+
+            toast.success("You've successfully joined the list")
+
+
+            const result =  await fetch("https://u-secured.herokuapp.com/api/v1/users/list", {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(values),
+
+            
+            })
+
+            const resultInJson = await result.json()
+            console.log(resultInJson);
+                
+            }
+
+            return { status, message };
+
     }
 
-
     const validationSchema = Yup.object({
-        firstname: Yup.string().required('Firstname is required'),
-        lastname : Yup.string().required("Lastname is required"),
+        first_name: Yup.string().required('Firstname is required'),
+        last_name : Yup.string().required("Lastname is required"),
         email : Yup.string().email("Invalid email format").required("Email is required"),
         state : Yup.string().required("Please select your state"),
         // phone : Yup.string().required("Phone is required")
-        phone : Yup.number("Phone must be a number")
+        phone :  Yup.string()
             .required("Phone is required")
-            .min(10)
-            .positive("Negative values not allowed")
-            .integer()
-            .min(5, "Must be more than 5")
+            .min(10, 'at least 10 characters')
+            .matches(/[0-9]/, 'only numbers are allowed')
     })
 
    
@@ -111,7 +136,7 @@ const AwaitingForm = () => {
 
                 {/* FORM DAT STARTS HERE */}
 
-                <form action="" onSubmit={formData.handleSubmit}>
+                <form action="" method='POST' onSubmit={formData.handleSubmit}>
                         <h3>Enter your details below</h3>
 
                         <div className="input-field">
@@ -119,16 +144,16 @@ const AwaitingForm = () => {
                                 type="text" 
                                 placeholder='First name'
                                 onChange={formData.handleChange}    
-                                name="firstname"
-                                value={formData.values.firstname}
+                                name="first_name"
+                                value={formData.values.first_name}
                                 onBlur={formData.handleBlur}
                             />
                             {
-                                formData.touched.firstname &&  formData.errors.firstname? <InfoCircle size="20" className='icon' color="red" /> : <Grammerly size="20" className='icon' color="#444" />
+                                formData.touched.first_name &&  formData.errors.first_name? <InfoCircle size="20" className='icon' color="red" /> : <Grammerly size="20" className='icon' color="#444" />
                             }
                             
                             {
-                                formData.touched.firstname &&  formData.errors.firstname ? <small className='error'>{formData.errors.firstname}</small> : null
+                                formData.touched.first_name &&  formData.errors.first_name ? <small className='error'>{formData.errors.first_name}</small> : null
                             }
                             
                         </div>
@@ -138,16 +163,16 @@ const AwaitingForm = () => {
                                 type="text" 
                                 placeholder='Last name'
                                 onChange={formData.handleChange}    
-                                name="lastname"
-                                value={formData.values.lastname}
+                                name="last_name"
+                                value={formData.values.last_name}
                                 onBlur={formData.handleBlur}
                             />
                            {
-                                formData.touched.lastname &&  formData.errors.lastname  ? <InfoCircle size="20" className='icon' color="red" /> : <Grammerly size="20" className='icon' color="#444" />
+                                formData.touched.last_name &&  formData.errors.last_name  ? <InfoCircle size="20" className='icon' color="red" /> : <Grammerly size="20" className='icon' color="#444" />
                             }
                             
                             {
-                                formData.touched.lastname &&  formData.errors.lastname ? <small className='error'>{formData.errors.lastname} </small> : null
+                                formData.touched.last_name &&  formData.errors.last_name ? <small className='error'>{formData.errors.last_name} </small> : null
                             }
                             
                         </div>

@@ -33,16 +33,11 @@ const Mobile = () => {
 
         <Swiper
         breakpoints={{
-          500: {
-            width: 500,
+          850: {
+            width: 850,
             slidesPerView: 1,
             pagination:true
           },
-          868: {
-            width: 768,
-            slidesPerView: 2,
-              spaceBetween:20,
-            },
             1024: {
               width: 1024,
               spaceBetween:30,
@@ -50,7 +45,7 @@ const Mobile = () => {
           },
             1280: {
               width: 1280,
-              spaceBetween:30,
+              // spaceBetween:30,
             slidesPerView: 3,
           },
 

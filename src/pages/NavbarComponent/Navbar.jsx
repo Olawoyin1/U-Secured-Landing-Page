@@ -33,7 +33,7 @@ const Navbar = () => {
         type : "tween",
         duration: 1.35,
         bounce: 0,
-        ease: "linear",
+        ease: "easeIn",
         stifness : 0,
       }
     }

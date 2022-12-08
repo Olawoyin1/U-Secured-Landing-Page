@@ -9,18 +9,23 @@ import Waitlist from './pages/WaitlistComponent/Waitlist';
 import Navbar from './pages/NavbarComponent/Navbar';
 import ErrorPage from './pages/Error';
 import SharedLayout from './component/SharedLayout';
+// import {AnimatePrescence} from "framer-motion"
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<SharedLayout />}>
-              <Route index element={<Hero />}/>
-              <Route path='waitlist' element={<Waitlist />}/>
-              <Route path='*' element={<ErrorPage />}/>
-          </Route>
-        </Routes>
+      {/* <AnimatePrescence> */}
+
+          <Routes>
+            <Route path='/' element={<SharedLayout />}>
+                <Route index element={<Hero />}/>
+                <Route path='waitlist' element={<Waitlist />}/>
+                <Route path='*' element={<ErrorPage />}/>
+            </Route>
+          </Routes>
+          
+      {/* </AnimatePrescence> */}
       </BrowserRouter>
       
     </div>

@@ -53,17 +53,17 @@ const Each = ({classlist, large_screen, small_screen, title,content}) => {
                     
                 >
                     <h2 className="col-headings">{title}</h2>
-                    <motion.p ani> 
-                           {
-                            readMore ? content : `${content.substring(0,200)}...`
-                           }
+                    <motion.p layout> 
+                      {
+                        readMore ? content : `${content.substring(0,200)}...`
+                      }
 
-                            <button className='btn3' onClick={()=>{setReadMore(!readMore)}}>
-                                {
-                                    readMore ? "Show less" : "Read more"
-                                }
-                            </button>
-                        </motion.p>
+                      <motion.button layout className='btn3' onClick={()=>{setReadMore(!readMore)}}>
+                        {
+                          readMore ? "Show less" : "Read more"
+                        }
+                      </motion.button>
+                    </motion.p>
                 </motion.div>
             </motion.div>
 
