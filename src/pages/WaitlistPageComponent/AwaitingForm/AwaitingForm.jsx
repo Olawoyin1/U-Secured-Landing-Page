@@ -17,37 +17,32 @@ const AwaitingForm = () => {
         last_name : "",
         email : "",
         state : "",
-        // countryCode : "+234",
         phone : ""
     }
 
     const onSubmit =async (values, {resetForm}) =>{
         if(validationSchema){
-            
-            console.log(values);
-            resetForm({ values: ""})
-
-            toast.success("You've successfully joined the list")
-
-
             const result =  await fetch("https://u-secured.herokuapp.com/api/v1/users/list", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(values),
-
-            
+                body: JSON.stringify(values),            
             })
+            .then((response) => {
+             return response
+              }).then(data=>{
+                // guard clause
+               if(data.status===409)return toast.error(`user with email : ${values.email} already joined the wait list !`)
+               resetForm({ values: ""})
+                return toast.success(' congrats !, you successfully joined the wait list')
+              })
+              .catch((err) => {
+                return
+              });
 
-            const resultInJson = await result.json()
-            console.log(resultInJson);
-                
-            }
-
-            return { status, message };
-
+        }
     }
 
     const validationSchema = Yup.object({
@@ -55,7 +50,6 @@ const AwaitingForm = () => {
         last_name : Yup.string().required("Lastname is required"),
         email : Yup.string().email("Invalid email format").required("Email is required"),
         state : Yup.string().required("Please select your state"),
-        // phone : Yup.string().required("Phone is required")
         phone :  Yup.string()
             .required("Phone is required")
             .min(10, 'at least 10 characters')
@@ -68,12 +62,8 @@ const AwaitingForm = () => {
     const formData = useFormik({
         initialValues,
         onSubmit,
-        // validate
         validationSchema
     })
-    
-    // console.log(formData.errors);
-
     const States =[
         "Abia",
         "Adamawa",

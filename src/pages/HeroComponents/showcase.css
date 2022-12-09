@@ -101,13 +101,7 @@
     }
 
 
-    .reverse-grid{
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
-        grid-template-areas: 
-            "box-b"
-            "box-a";
-    }
+  
 
 
     .arrow-pc{

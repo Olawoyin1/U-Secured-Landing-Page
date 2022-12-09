@@ -102,7 +102,46 @@ option{
     gap: 10px;
 }
 
+.rotating {
+    width: 2rem;
+    height: 2rem;
+    /* background: linear-gradient(10deg, #7ee7faae 0%, #eec0c6d1 100%);     */
+    box-shadow: -5px -5px 10px #7ee7faae, #4087EA;
+}
 
+.dot{
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(10deg, #7ee7faae 0%, #eec0c6d1 100%);    
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.104), 5px 5px 10px rgba(70,70,70,0.12);
+    border-radius: 50%;
+    background-color: red;
+}
+
+
+.long{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;  
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.104), 5px 5px 10px rgba(70,70,70,0.12);
+    background: linear-gradient(10deg, #7ee7faae 0%, #eec0c6d1 100%);
+}
+
+.long2{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%; 
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.104), 5px 5px 10px rgba(70,70,70,0.12);
+    background: linear-gradient(10deg, #7ee7faae 0%, #eec0c6d1 100%);
+}
+
+
+.newLoad{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .buttons > button{
     border: none;
@@ -165,6 +204,25 @@ option{
     "box-a box-b";
 }
 
+.reverse-content{
+    grid-area: box-a;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start ;
+    justify-content: center;
+}
+
+
+.reverse-image{
+    grid-area: box-b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+
 
 
 .waitlist-component .footer-waitlist-container{
@@ -178,6 +236,18 @@ option{
         font-size: 50px;
     }
 }
+
+@media (max-width:850px){
+    .reverse-grid{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        grid-template-areas: 
+            "box-b"
+            "box-a";
+    }
+}
+
+
 
 @media (max-width:500px){
     .mobile-screen{

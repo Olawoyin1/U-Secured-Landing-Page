@@ -65,50 +65,50 @@ const WaitlistScreen = () => {
       <div className="container waitlist-container">
 
 
-        <div className="col-2 reverse-col waitlist-col">
-            <div className="col-content">
+        <div className=" reverse-grid ">
+            <div className="reverse-content">
               <h1>Get ready for <br /> the <span className='color'>BIG</span> launch!</h1>
               <p>We’ll let you know when eveything’s ready</p>
             
 
-            <div className="countdown">
+              <div className="countdown">
 
-              <div className="countdown-el">
-                <h1>{month}</h1>
-                <small className="muted">MONTHS</small>
+                <div className="countdown-el">
+                  <h1>{month}</h1>
+                  <small className="muted">MONTHS</small>
+                </div>
+
+                <span className='big-colon'>:</span>
+
+                <div className="countdown-el">
+                  <h1>{days}</h1>
+                  <small className="muted">DAYS</small>
+                </div>
+
+                <span className='big-colon'>:</span>
+
+                <div className="countdown-el">
+                  <h1>{hours}</h1>
+                  <small className="muted">HOURS</small>
+                </div>
+
+                <span className='big-colon'>:</span>
+
+                <div className="countdown-el">
+                  <h1>{minutes}</h1>
+                  <small className="muted">MINUTES</small>
+                </div>
+
+                <span className='big-colon'>:</span>
+
+                <div className="countdown-el">
+                  <h1 className='color'>{seconds}</h1>
+                  <small className="muted color"><b>SECONDS</b></small>
+                </div>
               </div>
 
-              <span className='big-colon'>:</span>
-
-              <div className="countdown-el">
-                <h1>{days}</h1>
-                <small className="muted">DAYS</small>
-              </div>
-
-              <span className='big-colon'>:</span>
-
-              <div className="countdown-el">
-                <h1>{hours}</h1>
-                <small className="muted">HOURS</small>
-              </div>
-
-              <span className='big-colon'>:</span>
-
-              <div className="countdown-el">
-                <h1>{minutes}</h1>
-                <small className="muted">MINUTES</small>
-              </div>
-
-              <span className='big-colon'>:</span>
-
-              <div className="countdown-el">
-                <h1 className='color'>{seconds}</h1>
-                <small className="muted color"><b>SECONDS</b></small>
-              </div>
             </div>
-
-            </div>
-            <div className="waitlist-image">
+            <div className="reverse-image">
                 <img className='large-screen' src="images/waitlist-large.svg" alt="" />
                 <img className="mobile-screen" src="images/waitlist-mobile.svg" alt="" />
             </div>

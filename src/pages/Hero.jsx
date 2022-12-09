@@ -5,6 +5,7 @@ import Showcase from './HeroComponents/Showcase'
 import Founders from './FoundersComponent/Founders'
 import Mobile from './MobileComponent/Mobile'
 import Offer from './OfferComponent/Offer'
+import Loading from './Loading'
 
 const Hero = () => {
   return (
@@ -14,6 +15,7 @@ const Hero = () => {
       <Offer />
       <Mobile />
       <Footer />
+      
    
     </section>
   )
