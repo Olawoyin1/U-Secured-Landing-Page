@@ -34,9 +34,9 @@ const AwaitingForm = () => {
              return response
               }).then(data=>{
                 // guard clause
-               if(data.status===409)return toast.error(`user with email : ${values.email} already joined the wait list !`)
+               if(data.status===409)return toast.error(`you already joined the wait list with ${values.email} !`)
                resetForm({ values: ""})
-                return toast.success(' congrats !, you successfully joined the wait list')
+                return toast.success('you successfully joined the wait list')
               })
               .catch((err) => {
                 return
