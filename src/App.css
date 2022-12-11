@@ -6,7 +6,7 @@
     /* border: 1px solid red; */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap'); 
+/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');  */
 
 *::after{
     margin: 0;
@@ -230,12 +230,18 @@ option{
 }
 
 
+@media (max-width:1024px){
+    h1{
+        font-size: 50px;
+    }
+}
 
 @media (max-width:1015px){
     h1{
         font-size: 50px;
     }
 }
+
 
 @media (max-width:850px){
     .reverse-grid{
@@ -274,7 +280,7 @@ option{
 
     h1{
         font-size: 45px;
-        font-weight: 600;
+        font-weight: 700;
     }
 
 }

@@ -65,8 +65,8 @@ const Navbar = () => {
 
               <li className="first"><a onClick={()=> setOpenNav(true)} href="#about">About Us</a></li>
               <li><a onClick={()=> setOpenNav(true)} href="#offer">Features</a></li>
-              <li><a onClick={()=> setOpenNav(true)} href="">News</a></li>
-              <li><a onClick={()=> setOpenNav(true)} href="">Contact</a></li>
+              <li><a onClick={()=> setOpenNav(true)} href="#news">News</a></li>
+              <li><a onClick={()=> setOpenNav(true)} href="#contact">Contact</a></li>
               <li className='last'><Link className='btn btn-nav' to={"waitlist"} onClick={()=> setOpenNav(true)}>Join the waitlist</Link></li>
               
 

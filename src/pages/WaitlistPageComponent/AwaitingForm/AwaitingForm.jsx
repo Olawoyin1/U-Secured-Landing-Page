@@ -2,14 +2,16 @@ import React, {useState} from 'react'
 import "./await.css"
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { Toaster, toast } from 'react-hot-toast';
-import { Grammerly, InfoCircle, Sms } from 'iconsax-react'
+import { Flash, Grammerly, InfoCircle, Sms } from 'iconsax-react'
 import { useFormik } from 'formik';
 import  * as Yup from "yup"
 import { HiExclamationCircle } from 'react-icons/hi';
+import Loading from '../../Loading';
+import { motion } from "framer-motion"
 
 const AwaitingForm = () => {
 
-    const [status, setStatus] = useState("");
+    const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
 
     const initialValues = {
@@ -22,6 +24,9 @@ const AwaitingForm = () => {
 
     const onSubmit =async (values, {resetForm}) =>{
         if(validationSchema){
+
+            setLoading(true)
+
             const result =  await fetch("https://u-secured.herokuapp.com/api/v1/users/list", {
                 method: "POST",
                 headers: {
@@ -34,7 +39,10 @@ const AwaitingForm = () => {
              return response
               }).then(data=>{
                 // guard clause
-               if(data.status===409)return toast.error(`you already joined the wait list with ${values.email} !`)
+                setLoading(false)
+               if(data.status===409){
+                return toast.error(`you already joined the wait list with ${values.email} !`)
+               }
                resetForm({ values: ""})
                 return toast.success('you successfully joined the wait list')
               })
@@ -108,15 +116,104 @@ const AwaitingForm = () => {
         "+234",
     ]
 
+    const styles = {
+        minHeight : "100vh",
+        display : "flex",
+        // flexDirection : "column",
+        alignItems : "center",
+        justifyContent : "center",
+        position: "fixed",
+        height: "100vh",
+        width: "100vw",
+        backgroundColor: "rgba(0, 0, 0, 0.3)",
+        left: 0,
+        top: 0,
+    }
+    
+    const variant = {
+        animate : {
+            x : [5, 40],
+            transition : {
+                x : {
+                    yoyo : "Infinity",
+                    duration : 0.5,
+            },
+            y : {
+                yoyo : "Infinity",
+                duration : 0.25
+               }
+            }
+           
+        }
+            
+    }
+    
+    
+    const variant2 = {
+        animate : {
+            x : [40, 5],
+            transition : {
+                x : {
+                    yoyo : "Infinity",
+                    duration : 0.5,
+                    // staggerChildren : 1.4
+            },
+            y : {
+                yoyo : "Infinity",
+                duration : 0.25
+               }
+            }
+           
+        }
+            
+    }
+
+ 
+
 
 
   return (
     <div className='awaiting-list'>
+
+        {/* LOADING WHEN FORM IS SUBMITTED */}
+
+        {
+            loading ? 
+            <div className="loading">
+                <div style={styles}>
+                
+                    <motion.img src="images/mobile-logo.svg"  alt="" />
+                    
+                    <div>
+                        <motion.div
+                            className='long'
+                            variants={variant}
+                            animate="animate"
+                        ></motion.div>
+                        <motion.div
+                            className='long2'
+                            variants={variant2}
+                            animate="animate"
+                        ></motion.div>
+
+                    </div>
+                </div>
+             </div>
+             :
+             null
+        }
+        
+        {/* LOADING DIV ENDS HERE */}
+
+
+
+
+
         <div className="container await-container">
        
             <div className="col-2">
 
-                <div className="await-image">
+                <div className="col-image">
                     <img className='large-screen' src="images/awaiting-large.svg" alt="" />
                     <img className='mobile-screen' src="images/awaiting-mobile.svg" alt="" />
                 </div>

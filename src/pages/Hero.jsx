@@ -15,7 +15,6 @@ const Hero = () => {
       <Offer />
       <Mobile />
       <Footer />
-      
    
     </section>
   )

@@ -5,7 +5,7 @@ export default function Loading() {
     const styles = {
         minHeight : "100vh",
         display : "flex",
-        flexDirection : "column",
+        // flexDirection : "column",
         alignItems : "center",
         justifyContent : "center"
     }
@@ -113,9 +113,9 @@ export default function Loading() {
   return (
     <div style={styles}>
         
-        <motion.img variants={newLoad} animate={"animate"} src="images/mobile-logo.svg"  alt="" />
-        Loading...
-        {/* <div>
+        <motion.img src="images/mobile-logo.svg"  alt="" />
+        
+        <div>
             <motion.div
                 className='long'
                 variants={variant}
@@ -127,7 +127,7 @@ export default function Loading() {
                 animate="animate"
             ></motion.div>
 
-        </div> */}
+        </div>
     </div>
     
     // <div className="newLoad">
