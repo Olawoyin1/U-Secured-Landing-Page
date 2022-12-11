@@ -24,34 +24,34 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
     }
 
     const onSubmit =async (values, {resetForm}) =>{
-        // if(validationSchema){
+        if(validationSchema){
 
-        //     setLoading(true)
+            setLoading(true)
 
-        //     const result =  await fetch("https://u-secured.herokuapp.com/api/v1/users/list", {
-        //         method: "POST",
-        //         headers: {
-        //             Accept: "application/json",
-        //             "Content-Type": "application/json",
-        //         },
-        //         body: JSON.stringify(values),            
-        //     })
-        //     .then((response) => {
-        //      return response
-        //       }).then(data=>{
-        //         // guard clause
-        //         setLoading(false)
-        //        if(data.status===409){
-        //         return toast.error(`you already joined the wait list with ${values.email} !`)
-        //        }
-        //        resetForm({ values: ""})
-        //         return toast.success('you successfully joined the wait list')
-        //       })
-        //       .catch((err) => {
-        //         return
-        //       });
+            const result =  await fetch("https://u-secured.herokuapp.com/api/v1/users/list", {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(values),            
+            })
+            .then((response) => {
+             return response
+              }).then(data=>{
+                // guard clause
+                setLoading(false)
+               if(data.status===409){
+                return toast.error(`you already joined the wait list with ${values.email} !`)
+               }
+               resetForm({ values: ""})
+                return toast.success('you successfully joined the wait list')
+              })
+              .catch((err) => {
+                return
+              });
 
-        // }
+        }
 
         console.log(values);
     }
