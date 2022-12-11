@@ -9,7 +9,7 @@ import { HiExclamationCircle } from 'react-icons/hi';
 import Loading from '../../Loading';
 import { motion } from "framer-motion"
 
-const AwaitingForm = () => {
+const AwaitingForm = ({openNav, setOpenNav}) => {
 
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
@@ -173,7 +173,7 @@ const AwaitingForm = () => {
 
 
   return (
-    <div className='awaiting-list'>
+    <div className='awaiting-list' onClick={()=>setOpenNav(true)}>
 
         {/* LOADING WHEN FORM IS SUBMITTED */}
 
@@ -340,6 +340,21 @@ const AwaitingForm = () => {
                                 }
                             
                             </div>
+
+                            
+                        </div>
+
+
+                        <div className="input-field">
+                            <input 
+                                type="text" 
+                                placeholder='Add referral code (Optional)'
+                                onChange={formData.referral}    
+                                name="referral"
+                                value={formData.values.referral}
+                                onBlur={formData.handleBlur}
+                            />
+                         
                         </div>
 
                         <div className="form-buttons">

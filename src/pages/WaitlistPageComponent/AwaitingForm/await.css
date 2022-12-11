@@ -161,6 +161,10 @@ select::-ms-expand {
     width: 8rem;
 }
 
+.input-flex{
+    margin-bottom: 20px;
+}
+
 .input-flex-input{
     width: 100%;
     position: relative;

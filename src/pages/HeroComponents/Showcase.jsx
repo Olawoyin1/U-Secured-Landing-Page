@@ -7,9 +7,9 @@ import { ArrowDown } from 'iconsax-react';
 
 
 
-const Showcase = () => {
+const Showcase = ({openNav, setOpenNav}) => {
   return (
-    <div className="hero">
+    <div className="hero" onClick={()=>setOpenNav(true)}>
       <div className="container  reverse-grid">
         <div className="reverse-content">
             <h1>Safety made <br /> just for <span className="color">you</span></h1>

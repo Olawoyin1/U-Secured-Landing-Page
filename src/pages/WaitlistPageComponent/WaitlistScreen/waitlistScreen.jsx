@@ -3,7 +3,7 @@ import "./waitlist.css"
 import { Link } from 'react-router-dom'
 import Countdown from 'react-countdown';
 
-const WaitlistScreen = () => {
+const WaitlistScreen = ({openNav, setOpenNav}) => {
 
     const [month, setMonth] = useState("00")
     const [days, setDays] = useState("00")
@@ -61,7 +61,7 @@ const WaitlistScreen = () => {
   
 
   return (
-    <div className="hero waitlist-bg">
+    <div className="hero waitlist-bg" onClick={()=>setOpenNav(true)}>
       <div className="container waitlist-container">
 
 

@@ -9,21 +9,25 @@ const Hero = React.lazy(()=>import("./pages/Hero"))
 const Waitlist = React.lazy(()=>import("./pages/WaitlistComponent/Waitlist"))
 
 function App() {
+
+  const [openNav, setOpenNav] = React.useState(true)
+
+
   return (
     <div>
       <BrowserRouter>
 
           <Routes>
-            <Route path='/' element={<SharedLayout />}>
+            <Route path='/' element={<SharedLayout openNav = {openNav} setOpenNav={setOpenNav} />}>
                 <Route index element={
                   <Suspense fallback={<Loading />}>
-                    <Hero />
+                    <Hero  openNav = {openNav} setOpenNav={setOpenNav}/>
                   </Suspense>
                 }
                 />
                 <Route path='waitlist' element={
                 <Suspense fallback={<Loading />}>
-                  <Waitlist />
+                  <Waitlist openNav = {openNav} setOpenNav={setOpenNav} />
                 </Suspense>
                 }/>
                 <Route path='*' element={<ErrorPage />}/>

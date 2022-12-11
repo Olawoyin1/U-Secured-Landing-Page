@@ -5,9 +5,8 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 import { HiOutlineX } from "react-icons/hi";
 import { motion } from 'framer-motion';
 
-const Navbar = () => {
+const Navbar =({openNav, setOpenNav}) => {
 
-  const [openNav, setOpenNav] = React.useState(true)
   
   const [scroll, SetScroll] = React.useState(false)
 

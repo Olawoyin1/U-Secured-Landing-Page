@@ -14,9 +14,9 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
 
 
-const Mobile = () => {
+const Mobile = ({openNav, setOpenNav}) => {
   return (
-    <div className='mobile'>
+    <div className='mobile' onClick={()=>setOpenNav(true)}>
 
         <div className="container mobile-container">
 

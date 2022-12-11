@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import {Autoplay, Pagination, Navigation } from "swiper";
 
 
-const About = () => {
+const About = ({openNav, setOpenNav}) => {
 
     const AboutDatas = AboutData
 
@@ -23,7 +23,7 @@ const About = () => {
 
 
   return (
-    <div className='about' id='about'>
+    <div className='about' id='about' onClick={()=>setOpenNav(true)}>
       <div className="container about-container">
         <div className="box bigger-box">
           <img src="images/about-arrow.svg" className='about-arrow' alt="" />

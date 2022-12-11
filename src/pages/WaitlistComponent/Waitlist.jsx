@@ -4,7 +4,7 @@ import AwaitingForm from '../WaitlistPageComponent/AwaitingForm/AwaitingForm'
 import WaitlistScreen from "../WaitlistPageComponent/WaitlistScreen/waitlistScreen"
 import { motion } from 'framer-motion'
 
-const Waitlist = () => {
+const Waitlist = ({openNav, setOpenNav}) => {
 
   const waitlistVariant = {
     initial : {
@@ -30,9 +30,9 @@ const Waitlist = () => {
 
   return (
     <motion.div className='waitlist-component'>
-      <WaitlistScreen />
-      <AwaitingForm />
-      <Footer />
+      <WaitlistScreen openNav = {openNav} setOpenNav={setOpenNav}/>
+      <AwaitingForm openNav = {openNav} setOpenNav={setOpenNav}/>
+      <Footer openNav = {openNav} setOpenNav={setOpenNav}/>
     </motion.div>
   )
 }

@@ -3,13 +3,13 @@ import OfferData from './OfferData';
 import "./offer.css"
 import Each from './Each';
 
-const Offer = () => {
+const Offer = ({openNav, setOpenNav}) => {
 
     const OfferDatas = OfferData
 
 
   return (
-    <div class="what-we-offer" id='offer'>
+    <div class="what-we-offer" id='offer' onClick={()=>setOpenNav(true)}>
         <div class="container what-we-offer-container">
             <div class="offer-header">
                 <div class="header-content">

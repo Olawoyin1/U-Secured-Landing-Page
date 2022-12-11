@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./footer.css"
 
-const Footer = () => {
+const Footer = ({openNav, setOpenNav}) => {
     
     const [readMore, setReadMore] = React.useState(false)
 
@@ -17,7 +17,7 @@ const Footer = () => {
 
 
   return (
-    <div className="footer" id='footer'>
+    <div className="footer" id='footer' onClick={()=>setOpenNav(true)}>
         <div className="container footer-container">
             <div className="footer-waitlist-container">
                 <h3>Get ready for the big launch.</h3>
