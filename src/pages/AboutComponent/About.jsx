@@ -30,7 +30,7 @@ const About = ({openNav, setOpenNav}) => {
           <p>Unique features</p>
           <h1>All about <br/>  U-secured</h1>
           <div className="buttons">
-            <p>swipe <i class="uil uil-angle-double-right"></i> </p>
+            <p>swipe <i className="uil uil-angle-double-right"></i> </p>
           </div>
         </div>
 

@@ -9,10 +9,10 @@ const Offer = ({openNav, setOpenNav}) => {
 
 
   return (
-    <div class="what-we-offer" id='offer' onClick={()=>setOpenNav(true)}>
-        <div class="container what-we-offer-container">
-            <div class="offer-header">
-                <div class="header-content">
+    <div className="what-we-offer" id='offer' onClick={()=>setOpenNav(true)}>
+        <div className="container what-we-offer-container">
+            <div className="offer-header">
+                <div className="header-content">
                     <h1>How we make the world a safer place</h1>
                     <p>U-secured offers some highly unique features designed to keep you safe and connected to other users.</p>
                 </div>

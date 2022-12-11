@@ -19,38 +19,41 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
         last_name : "",
         email : "",
         state : "",
-        phone : ""
+        phone : "",
+        referral : ""
     }
 
     const onSubmit =async (values, {resetForm}) =>{
-        if(validationSchema){
+        // if(validationSchema){
 
-            setLoading(true)
+        //     setLoading(true)
 
-            const result =  await fetch("https://u-secured.herokuapp.com/api/v1/users/list", {
-                method: "POST",
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(values),            
-            })
-            .then((response) => {
-             return response
-              }).then(data=>{
-                // guard clause
-                setLoading(false)
-               if(data.status===409){
-                return toast.error(`you already joined the wait list with ${values.email} !`)
-               }
-               resetForm({ values: ""})
-                return toast.success('you successfully joined the wait list')
-              })
-              .catch((err) => {
-                return
-              });
+        //     const result =  await fetch("https://u-secured.herokuapp.com/api/v1/users/list", {
+        //         method: "POST",
+        //         headers: {
+        //             Accept: "application/json",
+        //             "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify(values),            
+        //     })
+        //     .then((response) => {
+        //      return response
+        //       }).then(data=>{
+        //         // guard clause
+        //         setLoading(false)
+        //        if(data.status===409){
+        //         return toast.error(`you already joined the wait list with ${values.email} !`)
+        //        }
+        //        resetForm({ values: ""})
+        //         return toast.success('you successfully joined the wait list')
+        //       })
+        //       .catch((err) => {
+        //         return
+        //       });
 
-        }
+        // }
+
+        console.log(values);
     }
 
     const validationSchema = Yup.object({
@@ -58,10 +61,12 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
         last_name : Yup.string().required("Lastname is required"),
         email : Yup.string().email("Invalid email format").required("Email is required"),
         state : Yup.string().required("Please select your state"),
-        phone :  Yup.string()
-            .required("Phone is required")
-            .min(10, 'at least 10 characters')
-            .matches(/[0-9]/, 'only numbers are allowed')
+        phone : Yup.number()
+        .typeError("That doesn't look like a phone number")
+        .positive("A phone number can't start with a minus")
+        .integer("A phone number can't include a decimal point")
+        .min(8)
+        .required('phone number is required'),
     })
 
    
@@ -119,7 +124,6 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
     const styles = {
         minHeight : "100vh",
         display : "flex",
-        // flexDirection : "column",
         alignItems : "center",
         justifyContent : "center",
         position: "fixed",
@@ -213,7 +217,7 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
        
             <div className="col-2">
 
-                <div className="col-image">
+                <div className="col-image waitlist-image">
                     <img className='large-screen' src="images/awaiting-large.svg" alt="" />
                     <img className='mobile-screen' src="images/awaiting-mobile.svg" alt="" />
                 </div>
@@ -349,7 +353,7 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
                             <input 
                                 type="text" 
                                 placeholder='Add referral code (Optional)'
-                                onChange={formData.referral}    
+                                onChange={formData.handleChange}    
                                 name="referral"
                                 value={formData.values.referral}
                                 onBlur={formData.handleBlur}
