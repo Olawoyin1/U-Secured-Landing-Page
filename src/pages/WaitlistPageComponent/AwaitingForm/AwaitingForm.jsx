@@ -182,7 +182,7 @@ const AwaitingForm = () => {
             <div className="loading">
                 <div style={styles}>
                 
-                    <motion.img src="images/mobile-logo.svg"  alt="" />
+                    <motion.img src="images/mobile-logo.svg"  width="30px" alt="" />
                     
                     <div>
                         <motion.div

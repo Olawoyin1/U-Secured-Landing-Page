@@ -113,7 +113,7 @@ export default function Loading() {
   return (
     <div style={styles}>
         
-        <motion.img src="images/mobile-logo.svg"  alt="" />
+        <motion.img src="images/mobile-logo.svg"  alt="" width="30px" />
         
         <div>
             <motion.div
