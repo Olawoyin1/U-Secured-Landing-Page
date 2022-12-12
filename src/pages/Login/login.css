@@ -1,7 +1,7 @@
 .login{
     height: fit-content;
     background-color: #F6F9FE;
-    
+    min-height: 100vh;
 }
 
 .login-container {
@@ -89,7 +89,7 @@
     }
 
     .login-container{
-        padding: 20px;
+        padding: 20px 0;
     }
     
     .form-field form{
