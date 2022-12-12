@@ -6,6 +6,7 @@ import ErrorPage from './pages/Error';
 import SharedLayout from './component/SharedLayout';
 import Loading from './pages/Loading';
 import Login from './pages/Login/Login';
+import Dashboard from './pages/DashboardCompnent/Dashboard';
 const Hero = React.lazy(()=>import("./pages/Hero"))
 const Waitlist = React.lazy(()=>import("./pages/WaitlistComponent/Waitlist"))
 
@@ -41,7 +42,7 @@ function App() {
 
                 <Route path='dashboard' element={
                   <Suspense fallback={<Loading />}>
-                    <Waitlist  />
+                    <Dashboard  />
                   </Suspense>
                 }/>
              
