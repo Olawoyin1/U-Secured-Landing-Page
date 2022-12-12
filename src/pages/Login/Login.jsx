@@ -118,8 +118,8 @@ const Login = () => {
             </div>
             {/* FORM FIELD ENDS HERE */}
 
-            <p className='login-bottom'>©2022 U-secured, All Rights Reserved</p>
 
+            <p className='login-bottom'>©2022 U-secured, All Rights Reserved</p>
         </div>
     </div>
   )
