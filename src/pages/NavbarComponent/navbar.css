@@ -42,6 +42,7 @@
 
 .links .last.btn{
     color: #fff;
+    /* font-weight: 700; */
 }
 
 
@@ -53,7 +54,8 @@
 
 .links .last{
     margin-left: auto;
-    color: #fff;
+    /* color: #fff; */
+
 }
 
 .links .last:hover{
@@ -82,12 +84,14 @@
     font-size: 40px;
 }
 
-.btn-nav{
+.last .btn-nav{
     color: #fff;
+    font-weight: bold;
 }
 
 .btn-nav:hover{
     font-weight: bold;
+    color: #444;
 }
 
 

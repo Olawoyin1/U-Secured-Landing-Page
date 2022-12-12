@@ -62,11 +62,11 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
         email : Yup.string().email("Invalid email format").required("Email is required"),
         state : Yup.string().required("Please select your state"),
         phone : Yup.number()
-        .typeError("That doesn't look like a phone number")
-        .positive("A phone number can't start with a minus")
-        .integer("A phone number can't include a decimal point")
-        .min(8)
-        .required('phone number is required'),
+            .typeError("That doesn't look like a phone number")
+            .positive("A phone number can't start with a minus")
+            .integer("A phone number can't include a decimal point")
+            .min(10, "Phone number should be at least 10 digit")
+            .required('phone number is required'),
     })
 
    

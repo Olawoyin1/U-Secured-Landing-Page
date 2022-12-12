@@ -45,6 +45,10 @@
     /* outline: 1.3px solid #4087EA; */
 }
 
+.col-content form input:focus {
+    border: 1px solid #4087EA;
+  }
+
 
 
 

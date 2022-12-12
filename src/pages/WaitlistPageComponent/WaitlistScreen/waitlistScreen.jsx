@@ -25,7 +25,11 @@ const WaitlistScreen = ({openNav, setOpenNav}) => {
         const newmonth = month < 10 ? "0" + month : month
         
         const days = Math.floor(distance / (24*60*60*1000))
+
+     
         const newdays = days < 10 ? "0" + days : days
+
+        const newday = newdays > 30 ? newdays - 30 : newdays
 
         
         const hours = Math.floor(distance % (24*60*60*1000)/(60*60*1000))
@@ -45,7 +49,7 @@ const WaitlistScreen = ({openNav, setOpenNav}) => {
           clearInterval(interval.current)
         }else{
           setMonth(newmonth);
-          setDays(newdays);
+          setDays(newday);
           setHours(newhours);
           setMinutes(newminutes);
           setSeconds(newseconds);
