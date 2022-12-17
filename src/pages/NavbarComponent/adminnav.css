@@ -1,0 +1,14 @@
+.admin-nav{
+    /* display: ; */
+    /* width: 100px; */
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-top: 30px;
+    background: #FFFFFF;
+    box-shadow: -2px -5px 12px rgba(204, 204, 204, 0.25), -2px -5px 4px rgba(204, 204, 204, 0.25), 2px 5px 12px rgba(204, 204, 204, 0.25), 2px 5px 4px rgba(204, 204, 204, 0.25);
+    border-radius: 16px;
+
+}

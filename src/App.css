@@ -8,7 +8,7 @@
 }
  
  
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800&display=swap'); */
 
 
 *::after{
@@ -24,6 +24,12 @@ html{
 .container{
     width: 85%;
     margin: 0 auto;
+}
+
+.dash-container{
+    width: 90%;
+    margin: 0 auto;
+    /* overflow: hidden; */
 }
 
 img{
@@ -222,6 +228,15 @@ option{
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.admin-flex{
+    display: grid;
+    grid-template-columns: 1fr 14fr;
+    padding: 40px 0;
+    gap: 50px;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 

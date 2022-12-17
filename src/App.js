@@ -7,8 +7,11 @@ import SharedLayout from './component/SharedLayout';
 import Loading from './pages/Loading';
 import Login from './pages/Login/Login';
 import Dashboard from './pages/DashboardCompnent/Dashboard';
+import Admin from './pages/DashboardCompnent/Admin/Admin';
+import SharedLayout2 from './component/SharedLayout2';
 const Hero = React.lazy(()=>import("./pages/Hero"))
 const Waitlist = React.lazy(()=>import("./pages/WaitlistComponent/Waitlist"))
+const Report = React.lazy(()=>import("./pages/DashboardCompnent/Report/Report"))
 
 function App() {
 
@@ -20,6 +23,7 @@ function App() {
       <BrowserRouter>
 
           <Routes>
+
             <Route path='/' element={<SharedLayout openNav = {openNav} setOpenNav={setOpenNav} />}>
 
                 <Route index element={
@@ -40,17 +44,27 @@ function App() {
                   </Suspense>
                 }/>
 
-                <Route path='dashboard' element={
-                  <Suspense fallback={<Loading />}>
-                    <Dashboard  />
-                  </Suspense>
-                }/>
-             
-             
-
 
                 <Route path='*' element={<ErrorPage />}/>
+
+             
+
+
             </Route>
+
+              <Route path='/dashboard' element={<SharedLayout2 />}>
+                <Route index element={<Admin />}/>
+
+              <Route path='report' element={
+                <Suspense fallback={<Loading />}>
+                  <Report  />
+                </Suspense>} 
+              />
+              
+              </Route>
+             
+
+              
           </Routes>
           
       </BrowserRouter>
