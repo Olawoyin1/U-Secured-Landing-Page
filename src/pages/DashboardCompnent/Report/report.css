@@ -1,0 +1,186 @@
+.report{
+    /* overflow: scroll; */
+    position: relative;
+}
+
+.r-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.r-right{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
+
+.admin-log{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.r-header form {
+    position: relative;
+}
+
+.search-icon{
+    position: absolute;
+    left: 10px;
+    top: 9px;
+}
+
+.r-header form .search{
+    background: #E6E6E6;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    padding-left: 35px;
+    max-width: 350px;
+    outline: none;
+}
+
+.admin-photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1.3px solid blue;
+}
+
+.filter{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    margin-top: 60px;
+}
+
+.filter select{
+    width: 150px;
+    padding: 8px;
+    background-color: #ECF3FD;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none;
+    border:0!important;
+    background-image: none;
+    flex: 1;
+    cursor:pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    /* width: 20em; */
+    height: 2.5em;
+    line-height: 2.5;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    cursor:pointer;
+    pointer-events:none;
+    transition:.25s all ease;
+}
+.select:hover::after {
+    color:#4087EA;
+}
+
+
+.f-space{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filter > div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.waitlist-users{
+    margin-top: 50px;
+    overflow: scroll;
+}
+
+.waitlist-users table{
+    width: 100%;
+    overflow-x: hidden;
+    border: none;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+
+.waitlist-users table td, 
+.waitlist-users table th{
+    text-align: center;
+    padding: 12px;
+    border: none;
+}
+
+
+.waitlist-users table th{
+    background-color: #4087EA;
+    color: #fff;
+}
+
+
+
+
+@media (max-width : 950px) {
+    .r-header{
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    .filter{
+        gap: 20px;
+    }
+}
+
+
+@media (max-width : 850px){
+    .admin-log{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .filter{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-name{
+        display: none;
+    }
+}
+
+
+@media (max-width : 500px){
+    .admin-log{
+        display: none;
+    }
+}

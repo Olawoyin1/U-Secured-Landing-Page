@@ -5,7 +5,7 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 import { HiOutlineX } from "react-icons/hi";
 import { motion } from 'framer-motion';
 
-const Navbar =({openNav, setOpenNav}) => {
+const Navbar =({openNav, setOpenNav, modal, setModal}) => {
 
   
   const [scroll, SetScroll] = React.useState(false)
@@ -18,6 +18,12 @@ const Navbar =({openNav, setOpenNav}) => {
     }
     
   })
+
+
+  const handleClick = ()=> {
+    setOpenNav(true)
+    setModal(true)
+  }
 
 
   const navVariant = {
@@ -64,7 +70,7 @@ const Navbar =({openNav, setOpenNav}) => {
 
               <li className="first">
                 <a 
-                  onClick={()=> setOpenNav(true)} 
+                  onClick={()=>setOpenNav(true) } 
                   href="#about"
                 >About Us</a>
               </li>
@@ -88,9 +94,10 @@ const Navbar =({openNav, setOpenNav}) => {
 
               <li>
                 <a 
-                  onClick={()=> setOpenNav(true)} 
-                  href="#contact"
-                >Contact</a>
+                  onClick={handleClick} 
+                  // href="#contact"
+
+                >Contact Us</a>
               </li>
 
 

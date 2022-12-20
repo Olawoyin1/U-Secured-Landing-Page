@@ -68,7 +68,7 @@ const Footer = ({openNav, setOpenNav}) => {
 
                         <div className="each">
                             <h3>Company</h3>
-                            <a href="">About Us</a>
+                            <a href="#about">About Us</a>
                             <a href="">FAQs</a>
                         </div>
                         <div className="each">
@@ -76,7 +76,7 @@ const Footer = ({openNav, setOpenNav}) => {
                             <a href="">Terms of Use</a>
                             <a href="">Privacy Policy</a>
                         </div>
-                        <div className="each">
+                        {/* <div className="each">
                             <h3>Contact Us</h3>
                             <div className="flex">
                                 <a href="">Tel</a>
@@ -86,7 +86,7 @@ const Footer = ({openNav, setOpenNav}) => {
                                 <a href="">Mail</a>
                                 <p className="color email">usecured.safety.ng@outlook.com</p>
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>

@@ -132,6 +132,7 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
         backgroundColor: "rgba(0, 0, 0, 0.3)",
         left: 0,
         top: 0,
+        zIndex: "999999"
     }
     
     const variant = {
@@ -183,8 +184,8 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
 
         {
             loading ? 
-            <div className="loading">
-                <div style={styles}>
+            <div>
+                <div style={styles} className="loading">
                 
                     <motion.img src="images/mobile-logo.svg"  width="30px" alt="" />
                     
@@ -254,8 +255,8 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
                                 type="text" 
                                 placeholder='Last name'
                                 onChange={formData.handleChange}    
-                                name="last_name"
                                 value={formData.values.last_name}
+                                name="last_name"
                                 onBlur={formData.handleBlur}
                             />
                            {

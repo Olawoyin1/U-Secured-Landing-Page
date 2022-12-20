@@ -54,7 +54,7 @@ const About = ({openNav, setOpenNav}) => {
         transition : {
           duration : 0.3,
           delay : 1,
-          type : "spring",
+          type : "tween",
           stiffness : 200,
           ease : "easeInOut",
           staggerChildren : 1,
@@ -74,7 +74,7 @@ const About = ({openNav, setOpenNav}) => {
         x : 0,
         opacity : 1,
         transition : {
-          type : "spring",
+          type : "tween",
           stifness : 200,
           bounce : 0.6,
           mass : 0.3

@@ -17,7 +17,7 @@ const Each = ({classlist, large_screen, small_screen, title,content}) => {
         transition : {
           duration : 0.3,
           delay : 0.,
-          type : "spring",
+          type : "tween",
           stiffness : 200,
           ease : "easeInOut",
           staggerChildren : 1
@@ -36,7 +36,7 @@ const mainChild = {
     y : 0,
     opacity : 1,
     transition : {
-      type : "spring",
+      type : "tween",
       stifness : 200,
       bounce : 0.6,
       mass : 0.3

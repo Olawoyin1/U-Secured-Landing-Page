@@ -8,7 +8,7 @@
 }
  
  
-/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800&display=swap');
 
 
 *::after{
@@ -50,6 +50,7 @@ p{
 
 a{
     color: #444;
+    cursor: pointer;
 }
 
 
@@ -145,6 +146,11 @@ option{
 }
 
 
+.loading{
+    /* z-index: 9999; */
+    background-color: red;
+}
+
 .newLoad{
     min-height: 90vh;
     display: flex;
@@ -232,7 +238,7 @@ option{
 
 .admin-flex{
     display: grid;
-    grid-template-columns: 1fr 14fr;
+    grid-template-columns: 80px auto;
     padding: 40px 0;
     gap: 50px;
     max-width: 90%;
@@ -269,6 +275,10 @@ option{
             "box-b"
             "box-a";
     }
+
+    .admin-flex{
+        gap: 10px;
+    }
 }
 
 
@@ -285,6 +295,10 @@ option{
     .btn{
         padding: 12px 20px;
 
+    }
+
+    .admin-flex{
+        grid-template-columns: 1fr;
     }
 
 
