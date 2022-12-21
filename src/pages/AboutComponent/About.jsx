@@ -33,8 +33,25 @@ const About = ({openNav, setOpenNav}) => {
         opacity : 1,
         x: 0,
         transition : {
-          delay: 0.5,
+          duration: 0.5,
+          staggerChildren : 0.7
         } , 
+      }
+    }
+
+    const transition = { duration: 0.5, ease: "easeInOut", type : "tween" };
+
+
+    const bigVar = {
+      initial : {
+        // x : width > 0 ? -100 : "0",
+        x : -100,
+        opacity : 0
+      },
+      animate : {
+        opacity : 1,
+        x: 0,
+        transition
       }
     }
 
@@ -51,15 +68,11 @@ const About = ({openNav, setOpenNav}) => {
         x : 0,
         opacity : 1,
         // rotate : [0 , 45 , -45, 0],
+        // transition 
         transition : {
-          duration : 0.3,
-          delay : 1,
-          type : "tween",
-          stiffness : 200,
-          ease : "easeInOut",
-          staggerChildren : 1,
-          when : "beforeChildren",
-        }
+          duration: 0.5,
+          staggerChildren : 1
+        } , 
       }
     }
   
@@ -73,12 +86,7 @@ const About = ({openNav, setOpenNav}) => {
       animate : {
         x : 0,
         opacity : 1,
-        transition : {
-          type : "tween",
-          stifness : 200,
-          bounce : 0.6,
-          mass : 0.3
-        }
+        transition
       }
     }
 
@@ -91,32 +99,30 @@ const About = ({openNav, setOpenNav}) => {
       className='about' 
       id='about' 
       onClick={()=>setOpenNav(true)}
-      variants={mainVariant}
-      initial={"initial"}
-      whileInView={"animate"}
+      
     >
       
-      <div className="container about-container">
-        <div className="box bigger-box">
+      <motion.div variants={mainVariant}
+      initial={"initial"}
+      whileInView={"animate"} className="container about-container">
+        <motion.div variants={bigVar} className="box bigger-box">
           <img src="images/about-arrow.svg" className='about-arrow' alt="" />
           <p>Unique features</p>
           <h1>All about <br/>  U-secured</h1>
           <div className="buttons">
             <p>swipe <i className="uil uil-angle-double-right"></i> </p>
           </div>
-        </div>
+        </motion.div>
 
         <motion.div 
           className="about-scroll"
           variants={aboutVariant}
-          whileInView="animate"
-          initial="initial"
         >
 
           {
             AboutDatas.map(data =>{
               return(
-                <div variants={slideIn} key={data.id} className={data.class}>
+                <div variants={slideIn}  key={data.id} className={data.class}>
                   <button className='icon-btn'>
                     <i className={data.icon}></i>
                     </button>
@@ -130,7 +136,7 @@ const About = ({openNav, setOpenNav}) => {
         </motion.div>
 
 
-      </div>
+      </motion.div>
     </motion.div>
   )
 }
