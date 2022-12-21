@@ -9,6 +9,15 @@ const Navbar =({openNav, setOpenNav, modal, setModal}) => {
 
   
   const [scroll, SetScroll] = React.useState(false)
+  const [width, setWidth] = React.useState(window.innerWidth)
+  
+
+  React.useEffect(()=>{
+    window.addEventListener("resize", ()=>{
+      setWidth(window.innerWidth)
+    })
+  }, [])
+
 
   window.addEventListener("scroll", ()=>{
     if(window.scrollY > 100){
@@ -60,7 +69,7 @@ const Navbar =({openNav, setOpenNav, modal, setModal}) => {
             <img src="images/large-logo.svg" alt="" />
           </Link>
           
-          <Link className='mobile-logo' to={"/"}>
+          <Link onClick={()=>setOpenNav(true)} className='mobile-logo' to={"/"}>
             <img src="images/mobile-logo.svg"  alt="" />
           </Link>
             
@@ -93,11 +102,17 @@ const Navbar =({openNav, setOpenNav, modal, setModal}) => {
 
 
               <li>
-                <a 
+                {
+                  width > 500 ? 
+                  <a 
                   onClick={handleClick} 
                   // href="#contact"
 
                 >Contact Us</a>
+                  :
+                  <Link onClick={()=>setOpenNav(true)} to={"contact"}>Contact Us</Link>
+                }
+                
               </li>
 
 

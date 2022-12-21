@@ -325,6 +325,10 @@ option{
         /* font-weight: 700; */
     }
 
+    p{
+        font-size: 15px;
+    }
+
 }
 
 

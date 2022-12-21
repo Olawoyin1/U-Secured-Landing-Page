@@ -9,6 +9,8 @@ import Dashboard from './pages/DashboardCompnent/Dashboard';
 import SharedLayout2 from './component/SharedLayout2';
 import ScrollToTop from './pages/ScrollToTop';
 import { AnimatePresence } from 'framer-motion';
+import Contact from './pages/ContactUs/Contact';
+import ContactUs from './pages/ContactUsPage/ContactUs';
 const Hero = React.lazy(()=>import("./pages/Hero"))
 const Waitlist = React.lazy(()=>import("./pages/WaitlistComponent/Waitlist"))
 const Report = React.lazy(()=>import("./pages/DashboardCompnent/Report/Report"))
@@ -20,6 +22,7 @@ const AnimatedRoute = () => {
 
     const [openNav, setOpenNav] = React.useState(true)
     const [modal, setModal] = React.useState(false)
+    const [show, setShow] = React.useState(true)
 
     const location = useLocation()
   return (
@@ -30,37 +33,56 @@ const AnimatedRoute = () => {
 
 
                 <Route 
-                path='/' 
-                element={
-                    <SharedLayout 
-                    openNav = {openNav} 
-                    setOpenNav={setOpenNav} 
-                    modal = {modal}
-                    setModal = {setModal}
-                    />
-                }
+                    path='/' 
+                    element={
+                        <SharedLayout 
+                        openNav = {openNav} 
+                        setOpenNav={setOpenNav} 
+                        modal = {modal}
+                        setModal = {setModal}
+                        show = {show}
+                        setShow = {setShow}
+                        />
+                    }
                 >
-                    <Route index element={
+                <Route index element={
                     <Suspense fallback={<Loading />}>
                         <Hero  
                         openNav = {openNav} 
                         setOpenNav={setOpenNav}
                         modal = {modal}
                         setModal = {setModal}
+                        show = {show}
+                        setShow = {setShow}
                         />
                     </Suspense>
-                    }/>
+                }/>
 
-                    <Route path='waitlist' element={
+                <Route path='waitlist' element={
                     <Suspense fallback={<Loading />}>
                         <Waitlist 
                         openNav = {openNav} 
                         setOpenNav={setOpenNav} 
                         modal={modal}
                         setModal={setModal}
+                        show = {show}
+                        setShow = {setShow}
                         />
                     </Suspense>
-                    }/>
+                }/>
+               
+                <Route path='contact' element={
+                    <Suspense fallback={<Loading />}>
+                        <ContactUs 
+                        openNav = {openNav} 
+                        setOpenNav={setOpenNav} 
+                        modal={modal}
+                        setModal={setModal}
+                        show = {show}
+                        setShow = {setShow}
+                        />
+                    </Suspense>
+                }/>
 
                     <Route path='login' element={
                     <Suspense fallback={<Loading />}>
