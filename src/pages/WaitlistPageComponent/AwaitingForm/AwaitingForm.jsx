@@ -173,12 +173,88 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
             
     }
 
+    const transition = { duration: 0.5, ease: "easeInOut", type : "tween" };
+
+    const awaitVar ={
+        initial : {
+            y: 100,
+            opacity : 0
+        },
+        animate: {
+            y:0,
+            opacity : 1,
+            transition :{
+                staggerChildren : 0.6,
+                duration: 0.7, 
+                ease: "easeInOut" ,
+                delay : 0.3
+            }
+        }
+    }
+
+    const illVar = {
+        initial : {
+            x: -100,
+            opacity : 0
+        },
+        animate: {
+            x:0,
+            opacity : 1,
+            transition
+        }
+    }
+ 
+   
+    const formVar = {
+        initial : {
+            x: 100,
+            opacity : 0
+        },
+        animate: {
+            x:0,
+            opacity : 1,
+            transition
+        }
+    }
+
+    const fieldsVar = {
+        initial : {
+            y: 100,
+            opacity : 0
+        },
+        animate: {
+            y:0,
+            opacity : 1,
+            transition :{
+                staggerChildren : 0.6,
+                duration: 0.7, 
+                ease: "easeInOut" ,
+                delay : 0.3,
+            }
+        }
+    }
+
+    const inputMotion = {
+        initial : {
+            y: -100,
+            opacity : 0
+        },
+        animate: {
+            y:0,
+            opacity : 1,
+            transition 
+        }
+    }
+
+
+
+
  
 
 
 
   return (
-    <div className='awaiting-list' onClick={()=>setOpenNav(true)}>
+    <motion.div  variants={awaitVar} whileInView="animate"    viewport={{once : true, amount : 0.5}} initial="initial" className='awaiting-list' onClick={()=>setOpenNav(true)}>
 
         {/* LOADING WHEN FORM IS SUBMITTED */}
 
@@ -218,20 +294,20 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
        
             <div className="col-2">
 
-                <div className="col-image waitlist-image">
+                <motion.div variants={illVar}   className="col-image waitlist-image">
                     <img className='large-screen' src="images/awaiting-large.svg" alt="" />
                     <img className='mobile-screen' src="images/awaiting-mobile.svg" alt="" />
-                </div>
+                </motion.div>
 
-                <div className="col-content">
+                <motion.div variants={formVar} className="col-content">
 
 
                 {/* FORM DAT STARTS HERE */}
 
-                <form action="" method='POST' onSubmit={formData.handleSubmit}>
+                <motion.form variants={fieldsVar} action="" method='POST' onSubmit={formData.handleSubmit}>
                         <h3>Enter your details below</h3>
 
-                        <div className="input-field">
+                        <motion.div variants={inputMotion} className="input-field">
                             <input 
                                 type="text" 
                                 placeholder='First name'
@@ -248,9 +324,9 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
                                 formData.touched.first_name &&  formData.errors.first_name ? <small className='error'>{formData.errors.first_name}</small> : null
                             }
                             
-                        </div>
+                        </motion.div>
                         
-                        <div className="input-field">
+                        <motion.div variants={inputMotion} className="input-field">
                             <input 
                                 type="text" 
                                 placeholder='Last name'
@@ -267,9 +343,9 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
                                 formData.touched.last_name &&  formData.errors.last_name ? <small className='error'>{formData.errors.last_name} </small> : null
                             }
                             
-                        </div>
+                        </motion.div>
 
-                        <div className="input-field">
+                        <motion.div variants={inputMotion} className="input-field">
                             <input
                                 type="text" 
                                 placeholder='E-mail address' 
@@ -287,9 +363,9 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
                                 formData.touched.email &&  formData.errors.email ? <small className='error'>{formData.errors.email}  </small> : null
                             }
                         
-                        </div>
+                        </motion.div>
 
-                        <div className="input-field">
+                        <motion.div variants={inputMotion}  className="input-field">
                             <div className="select">
                                 <select 
                                     name="state" 
@@ -308,9 +384,9 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
                                 formData.touched.state &&  formData.errors.state ? <small className='error'>{formData.errors.state}  </small> : null
                             }
 
-                        </div>
+                        </motion.div>
 
-                        <div className="input-flex">
+                        <motion.div variants={inputMotion} className="input-flex">
                             <div className="select">
 
                                 <select 
@@ -327,7 +403,7 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
                                 
                             </div>
                         
-                            <div className='input-flex-input'>
+                            <div variants={inputMotion} className='input-flex-input'>
                                 <input 
                                     type="text" 
                                     placeholder='000 000 0000' 
@@ -344,13 +420,13 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
                                     formData.touched.phone &&  formData.errors.phone ? <small className='error'>{formData.errors.phone} </small> : null
                                 }
                             
-                            </div>
-
-                            
                         </div>
 
+                            
+                        </motion.div>
 
-                        <div className="input-field">
+
+                        <motion.div  variants={inputMotion}  className="input-field">
                             <input 
                                 type="text" 
                                 placeholder='Add referral code (Optional)'
@@ -360,28 +436,28 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
                                 onBlur={formData.handleBlur}
                             />
                          
-                        </div>
+                        </motion.div>
 
-                        <div className="form-buttons">
+                        <motion.div variants={inputMotion} className="form-buttons">
                         
                             <button 
                                 className='btn'
                                 type='submit'
                             >Join The Waitlist</button>
-                        </div>
+                        </motion.div>
 
 
 
-                    </form>
+                    </motion.form>
 
                     <Toaster />
-                </div>
+                </motion.div>
 
             </div>
 
         </div>
 
-        </div>
+        </motion.div>
 
   )
 }
