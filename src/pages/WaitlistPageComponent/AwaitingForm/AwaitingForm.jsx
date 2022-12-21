@@ -177,17 +177,17 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
 
     const awaitVar ={
         initial : {
-            y: 100,
+            y: 150,
             opacity : 0
         },
         animate: {
             y:0,
             opacity : 1,
             transition :{
-                staggerChildren : 0.6,
+                staggerChildren : 1,
                 duration: 0.7, 
                 ease: "easeInOut" ,
-                delay : 0.7
+                delay : 0.3
             }
         }
     }
