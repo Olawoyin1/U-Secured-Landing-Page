@@ -187,7 +187,7 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
                 staggerChildren : 0.6,
                 duration: 0.7, 
                 ease: "easeInOut" ,
-                delay : 0.3
+                delay : 0.7
             }
         }
     }
