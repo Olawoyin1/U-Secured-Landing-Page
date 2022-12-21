@@ -105,8 +105,8 @@
     .col-2{
         grid-template-columns: 1fr;
         grid-template-areas: 
-            "box-b "
-            "box-a";
+        "box-b "
+        "box-a";
     }
 
     .col-2.reverse-col{
@@ -119,13 +119,22 @@
     .col-content p{
         max-width: 100%;
     }
-
+    
     .reverse{
         grid-template-areas: 
-            "live-img "
-            "live-cont";
+        "live-img "
+        "live-cont";
     }
     
+}
+
+@media (max-width:650px) {
+    .offer-header h1{
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width:500px){
@@ -139,7 +148,7 @@
 }
 
 
-@media (max-width:294px){
+@media (max-width:400px){
     .offer-header h1{
         font-size: 20px;
     }

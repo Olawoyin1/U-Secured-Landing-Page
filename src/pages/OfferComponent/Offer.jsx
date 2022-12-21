@@ -13,7 +13,7 @@ const Offer = ({openNav, setOpenNav}) => {
         <div className="container what-we-offer-container">
             <div className="offer-header">
                 <div className="header-content">
-                    <h1>How we make the world a safer place</h1>
+                    <h1>How we make the <br /> world a safer place</h1>
                     <p>U-secured offers some highly unique features designed to keep you safe and connected to other users.</p>
                 </div>
             </div>
