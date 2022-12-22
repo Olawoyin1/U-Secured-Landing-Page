@@ -9,7 +9,7 @@ import {  AnimatePresence } from "framer-motion"
 const Waitlist = ({openNav, setOpenNav, modal, setModal}) => {
 
 
-  const transition = { duration: 0.5, ease: "easeInOut" ,delay : 0.7};
+  const transition = { duration: 0.6, ease: "easeInOut" ,delay : 0.7};
 
   const waitMotion = {
     initial: { y: 100, opacity: 0 ,scale : 0},

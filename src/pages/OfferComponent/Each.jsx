@@ -15,12 +15,10 @@ const Each = ({classlist, large_screen, small_screen, title,content}) => {
         opacity : 1,
         // rotate : [0 , 45 , -45, 0],
         transition : {
-          duration : 0.3,
-          delay : 0.,
-          type : "tween",
-          stiffness : 200,
+          duration : 0.6,
           ease : "easeInOut",
-          staggerChildren : 1
+          when : "beforeChildren",
+          staggerChildren : 0.2
         }
       }
     }
@@ -36,10 +34,8 @@ const mainChild = {
     y : 0,
     opacity : 1,
     transition : {
-      type : "tween",
-      stifness : 200,
-      bounce : 0.6,
-      mass : 0.3
+      duration : 0.7,
+      ease : "easeInOut",
     }
   }
 }
@@ -48,27 +44,27 @@ const mainChild = {
    
 
   return (
-         <motion.div className={classlist}>
-                <motion.div 
-                  variants={childVar}
-                  initial="initial"
-                  whileInView="animate" 
-                  viewport={{once : true, amount : 0.5}} 
-                  className="col-image"
-                  >
-                  <motion.img 
-                        className='large-screen' 
-                        src={large_screen} 
-                        alt="" 
-                  />
-                  <img className='mobile-screen' src={small_screen}alt="" />
-                </motion.div>
-                <motion.div 
+        <motion.div 
+          variants={childVar}
+          initial="initial"
+          whileInView="animate" 
+          viewport={{once : true, }}  
+          className={classlist}
+         >
+            <motion.div 
+              className="col-image"
+              >
+              <motion.img 
+                    className='large-screen' 
+                    src={large_screen} 
+                    alt="" 
+              />
+              <img className='mobile-screen' src={small_screen}alt="" />
+            </motion.div>
+
+            <motion.div 
                     className="col-content"
-                    variants={childVar}
-                    initial="initial"
-                    whileInView="animate" 
-                    viewport={{once : true, amount : 0.5}}
+                    variants={mainChild}
                 >
                     <motion.h2 variants={mainChild}className="col-headings">{title}</motion.h2>
                     <motion.p layout variants={mainChild} > 
@@ -82,8 +78,9 @@ const mainChild = {
                         }
                       </motion.button>
                     </motion.p>
-                </motion.div>
-            </motion.div>
+            </motion.div> 
+
+        </motion.div>
 
   )
 }

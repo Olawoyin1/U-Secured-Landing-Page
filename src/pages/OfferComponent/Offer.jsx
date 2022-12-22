@@ -7,6 +7,8 @@ const Offer = ({openNav, setOpenNav}) => {
 
     const OfferDatas = OfferData
 
+    
+
 
   return (
     <div className="what-we-offer" id='offer' onClick={()=>setOpenNav(true)}>

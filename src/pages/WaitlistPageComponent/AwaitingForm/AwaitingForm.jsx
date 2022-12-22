@@ -173,7 +173,7 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
             
     }
 
-    const transition = { duration: 0.5, ease: "easeInOut", type : "tween" };
+    const transition = { duration: 0.6, ease: "easeInOut", type : "tween" };
 
     const awaitVar ={
         initial : {
@@ -227,7 +227,7 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
             y:0,
             opacity : 1,
             transition :{
-                staggerChildren : 0.6,
+                staggerChildren : 0.7,
                 duration: 0.7, 
                 when :"beforeChildren",
                 ease: "easeInOut" ,
@@ -256,7 +256,7 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
 
 
   return (
-    <motion.div  variants={awaitVar} whileInView="animate"    viewport={{once : true, amount : 0.5}} initial="initial" className='awaiting-list' onClick={()=>setOpenNav(true)}>
+    <motion.div  variants={awaitVar} whileInView="animate"    viewport={{once : true}} initial="initial" className='awaiting-list' onClick={()=>setOpenNav(true)}>
 
         {/* LOADING WHEN FORM IS SUBMITTED */}
 

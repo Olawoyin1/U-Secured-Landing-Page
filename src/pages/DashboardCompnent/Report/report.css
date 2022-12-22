@@ -119,12 +119,10 @@ select::-ms-expand {
 
 .waitlist-users{
     margin-top: 50px;
-    overflow: scroll;
 }
 
 .waitlist-users table{
     width: 100%;
-    overflow-x: hidden;
     border: none;
     border-collapse: collapse;
 }
