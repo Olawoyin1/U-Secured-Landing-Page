@@ -185,6 +185,7 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
             opacity : 1,
             transition :{
                 staggerChildren : 1,
+                when : "beforeChildren",
                 duration: 0.7, 
                 ease: "easeInOut" ,
                 delay : 0.3
@@ -228,6 +229,7 @@ const AwaitingForm = ({openNav, setOpenNav}) => {
             transition :{
                 staggerChildren : 0.6,
                 duration: 0.7, 
+                when :"beforeChildren",
                 ease: "easeInOut" ,
                 delay : 0.3,
             }

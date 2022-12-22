@@ -11,12 +11,12 @@ const Mobile = React.lazy(()=>import("./MobileComponent/Mobile"))
 
 const Hero = ({openNav, setOpenNav, modal , setModal}) => {
   
-const transition = { duration: 0.5, ease: "easeInOut" };
+const transition = { duration: 0.8, ease: "easeInOut" };
 
 const heroMotion = {
   initial: { y: -150, opacity: 0 },
   animate: { y: 0, opacity: 1, transition},
-  exit: { x: 150, opacity: 0, transition: { staggerChildren: 1 , duration: 0.8} }
+  exit: { x: 150, opacity: 0, transition: { staggerChildren: 1 , duration: 0.8,when :"beforeChildren",} }
 };
 
 

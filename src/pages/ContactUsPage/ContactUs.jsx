@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useFormik } from 'formik';
 import  * as Yup from "yup"
 import { InfoCircle } from 'iconsax-react';
+import { Toaster } from 'react-hot-toast';
 
 const ContactUs = ({openNav, setOpenNav}) => {
 
@@ -81,7 +82,7 @@ const ContactUs = ({openNav, setOpenNav}) => {
   const contactMotion = {
     initial: { x: -150, opacity: 0 },
     animate: { x: 0, opacity: 1, transition:{
-      staggerChildren : 1,duration: 1, ease: "easeInOut" 
+      staggerChildren : 1,duration: 1, ease: "easeInOut" ,when : "beforeChildren",
     }},
     exit: { x: -150, opacity: 0, transition }
   };
@@ -90,7 +91,7 @@ const ContactUs = ({openNav, setOpenNav}) => {
   const contactImgVar = {
     initial: { x: -150, opacity: 0 },
     animate: { x: 0, opacity: 1, transition:{
-      staggerChildren : 1,duration: 1, ease: "easeInOut" 
+      staggerChildren : 1,duration: 1, ease: "easeInOut" ,when :"beforeChildren",
     }},
     exit: { x: -150, opacity: 0, transition }
   };
@@ -102,6 +103,49 @@ const ContactUs = ({openNav, setOpenNav}) => {
     }},
     exit: { x: -150, opacity: 0, transition }
   };
+
+
+  const fieldsVar = {
+    initial : {
+        y: 100,
+        opacity : 0
+    },
+    animate: {
+        y:0,
+        opacity : 1,
+        transition :{
+          when :"beforeChildren",
+            staggerChildren : 0.6,
+            duration: 0.7, 
+            ease: "easeInOut" ,
+            delay : 0.3,
+        }
+    }
+}
+
+const formVar = {
+  initial : {
+      x: 100,
+      opacity : 0
+  },
+  animate: {
+      x:0,
+      opacity : 1,
+      transition
+  }
+}
+
+const inputMotion = {
+    initial : {
+        y: -100,
+        opacity : 0
+    },
+    animate: {
+        y:0,
+        opacity : 1,
+        transition 
+    }
+}
 
   return (
     <motion.div 
@@ -115,17 +159,25 @@ const ContactUs = ({openNav, setOpenNav}) => {
 
       <div className="container contact-container">
 
-        <motion.div variants={contactImgVar} className="contact-image">
-          <img src="images/contact.svg" alt="" />
-        </motion.div>
-        
-        <motion.div variants={contactFormVar} className="contact-form">
-              <form action="" onSubmit={formData.handleSubmit}>
-                  <div>
-                    <h2>Contact Us.</h2>
-                    <p>We are always ready and available to help you. </p>
-                      <div className="contact-fields">
-                        <label 
+       
+
+        <div className="col-2">
+
+          <motion.div variants={contactImgVar}   className="col-image waitlist-image"> 
+            <img src="images/contact.svg" alt="" />
+          </motion.div>
+
+          <motion.div variants={formVar} className="col-content">
+
+
+          {/* FORM DAT STARTS HERE */}
+
+          <motion.form variants={fieldsVar} animate="animate" initial="initial" action="" method='POST' onSubmit={formData.handleSubmit} className="contact-form">
+                  <h2>Contact Us.</h2>
+                  <p>We are always ready and available to help you. </p>
+
+                  <motion.div variants={inputMotion} className="contact-fields">
+                  <label 
                             htmlFor="Full Name"></label>
                         <input 
                             type="text" 
@@ -142,10 +194,10 @@ const ContactUs = ({openNav, setOpenNav}) => {
                         {
                             formData.touched.full_name &&  formData.errors.full_name ? <small className='error'>{formData.errors.full_name}  </small> : null
                         }
-                    </div>
-
-                      <div className="contact-fields">
-                          <label 
+                  </motion.div>
+                  
+                  <motion.div variants={inputMotion} className="contact-fields">
+                    <label 
                               htmlFor="Email Address"></label>
                           <input 
                               type="email" 
@@ -162,10 +214,10 @@ const ContactUs = ({openNav, setOpenNav}) => {
                           {
                               formData.touched.email &&  formData.errors.email ? <small className='error'>{formData.errors.email}  </small> : null
                           }
-                      </div>
+                  </motion.div>
 
-                      <div className="contact-fields">
-                          <label 
+                  <motion.div variants={inputMotion} className="contact-fields">
+                      <label 
                               htmlFor="phone number"></label>
                           <input 
                               type="text" 
@@ -182,12 +234,14 @@ const ContactUs = ({openNav, setOpenNav}) => {
                           {
                               formData.touched.phone &&  formData.errors.phone ? <small className='error'>{formData.errors.phone}  </small> : null
                           }
-                      </div>
+                  </motion.div>
 
-                  </div>
+                
 
-                  <div className="contact-fields">
-                      <label 
+
+
+                  <motion.div  variants={inputMotion}  className="contact-fields">
+                     <label 
                           htmlFor="message"></label>
                       <textarea 
                           name="message" 
@@ -208,14 +262,25 @@ const ContactUs = ({openNav, setOpenNav}) => {
                       {
                           formData.touched.message &&  formData.errors.message ? <small className='error'>{formData.errors.message}  </small> : null
                       }
-                  </div>
+                  </motion.div>
 
-                  <button type='submit' className='btn contact-btn'>Send Message</button>
-        </form>
-        </motion.div>
 
-        <div className="footer" id='footer' onClick={()=>setOpenNav(true)}>
-        <div className="container footer-container">
+                  <motion.div variants={inputMotion} className="form-buttons">
+                      <button type='submit' className='btn contact-btn'>Send Message</button>
+                      
+                  </motion.div>
+
+
+
+              </motion.form>
+
+              <Toaster />
+          </motion.div>
+
+        </div>
+
+    <div className="footer" id='footer' onClick={()=>setOpenNav(true)}>
+        <div className="footer-container">
            
             <div className="footer-grid">
                 <div className="footer-content">
