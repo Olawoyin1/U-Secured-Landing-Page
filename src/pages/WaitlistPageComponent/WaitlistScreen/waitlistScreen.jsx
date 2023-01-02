@@ -29,7 +29,7 @@ const WaitlistScreen = ({openNav, setOpenNav}) => {
      
       
 
-        const newday = days > 30 ? days - 30 : newdays
+        const newday = days > 30 ? days - 30 : days
 
         const newdays = newday < 10 ? "0" + newday : newday
 
