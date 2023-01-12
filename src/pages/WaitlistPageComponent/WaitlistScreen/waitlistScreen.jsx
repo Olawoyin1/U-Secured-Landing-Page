@@ -14,7 +14,7 @@ const WaitlistScreen = ({openNav, setOpenNav}) => {
     let interval;
 
     const staartTimer = () =>{
-      const countDownDate = new Date("Feb 1 2023").getTime();
+      const countDownDate = new Date("March 1 2023").getTime();
 
       interval = setInterval(() => {
 
